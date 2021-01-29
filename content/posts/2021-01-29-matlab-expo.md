@@ -5,12 +5,13 @@ categories:
   - "Tech"
 tags:
   - "FSAE"
+  - "MATLAB/Simlink"
 ---
 
 そんなに大した内容ではありませんが，MATLAB EXPO 2020で発表させて頂きました．  
 内容としては
   - 弊学FチームにMATLAB/Simlink開発環境を導入した．
-  - STM32 Nucleoで学Fマシンを動かせるようにした．
+  - STM32 Nucleoで学Fマシンを動かせるようにした．  
 といったところです．    
 
 リンクは[こちら](https://www.matlabexpo.com/content/dam/mathworks/mathworks-dot-com/images/events/matlabexpo/jp/2020/poster-session-9-matlab-expo-iwakiri.pdf)．
