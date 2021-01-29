@@ -35,7 +35,7 @@ googleAnalytics = ""
 
 [Params.logo]
   subtitle = "You only live once. Let's do it."
-  image = "img/eyecatch.jpg"
+  # image = "img/eyecatch.jpg"
   
 
 [Params.sidebar]
