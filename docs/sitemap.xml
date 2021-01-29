@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://xxkizashi.github.io/blank-space/about/about/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://xxkizashi.github.io/blank-space/</loc>
     <lastmod>2021-01-29T00:00:00+00:00</lastmod>
   </url>
@@ -53,11 +58,8 @@
   </url>
   
   <url>
-    <loc>https://xxkizashi.github.io/blank-space/about/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://xxkizashi.github.io/blank-space/about/</loc>
+    <lastmod>2020-01-29T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

@@ -28,20 +28,9 @@ googleAnalytics = ""
   weight = 1
 
 [[Menus.main]]
-  Name = "Posts"
-  URL = "/posts/"
-  weight = 3
-
-[[Menus.main]]
-  Name = "About"
-  URL = "/about/"
-  weight = 5
-
-
-[[Menus.main]]
   Name = "FSAE"
   URL = "https://xxkizashi.github.io/FSAE_TO_WIN/"
-  weight = 7
+  weight = 3
 
 
 [Params.logo]
