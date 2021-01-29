@@ -43,5 +43,5 @@ googleAnalytics = ""
   widgets = ["recent", "categories", "taglist", "social"]
 
 [Params.widgets.social]
-  twitter = "https://twitter.com/xxKFZ1S"
-  github = "https://github.com/xxkizashi"
+  twitter = "xxKFZ1S"
+  github = "xxkizashi"
