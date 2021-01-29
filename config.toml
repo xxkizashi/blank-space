@@ -51,3 +51,7 @@ googleAnalytics = ""
 [[Menus.main]]
   Name = "Posts"
   URL = "/posts/"
+
+[[params.addtional_menus]]
+  title =  "About"
+  href =  "/top/about/"

@@ -5,15 +5,14 @@
     <link>https://xxkizashi.github.io/blank-space/post/</link>
     <description>Recent content in Posts on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language><atom:link href="https://xxkizashi.github.io/blank-space/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome to my Blog</title>
-      <link>https://xxkizashi.github.io/blank-space/2021/01/29/hello-world/</link>
-      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>https://xxkizashi.github.io/blank-space/post/2021-01-29-hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xxkizashi.github.io/blank-space/2021/01/29/hello-world/</guid>
-      <description>Hello World! </description>
+      <guid>https://xxkizashi.github.io/blank-space/post/2021-01-29-hello-world/</guid>
+      <description>Common-Defined params title: &amp;ldquo;Hello World!&amp;rdquo; date: &amp;ldquo;2021-01-29&amp;rdquo; description: &amp;ldquo;初めての投稿&amp;rdquo; categories: &amp;ldquo;Tech&amp;rdquo; tags: &amp;ldquo;GitHub Pages&amp;rdquo; &amp;ldquo;Hugo&amp;rdquo; menu: main # Optional, add page to a menu. Options: main, side, footer Hello World!</description>
     </item>
     
   </channel>
