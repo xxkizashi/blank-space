@@ -1,5 +1,4 @@
 baseURL = "https://xxkizashi.github.io/blank-space/"
-DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
 title = "Blank Space"
 theme = "Mainroad"
@@ -10,19 +9,40 @@ canonifyurls = true
 summaryLength = 120
 googleAnalytics = ""
 
-[Author]
-  name = "xxkizashi"
-
 [Params]
   description = "xxkizashi's personal blog about everything"
   twitter_cards = false
   readmore = true
-  authorbox = true
   pager = true
   mathjax = true
+  post_navigation = true
+  postSections = ["posts"]
   post_meta = ["date", "categories"] # Order of post meta information
+  highlightColor = "#2189c8"
   customCSS = ["css/custom-font.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
+
+[[Menus.main]]
+  Name = "Home"
+  URL = "/"
+  weight = 1
+
+[[Menus.main]]
+  Name = "Posts"
+  URL = "/posts/"
+  weight = 3
+
+[[Menus.main]]
+  Name = "About"
+  URL = "/about/"
+  weight = 5
+
+
+[[Menus.main]]
+  Name = "FSAE"
+  URL = "https://xxkizashi.github.io/FSAE_TO_WIN/"
+  weight = 7
+
 
 [Params.logo]
   subtitle = "No Attach No Chance"
@@ -31,21 +51,8 @@ googleAnalytics = ""
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  widgets = ["search", "recent", "categories", "taglist", "social"]
+  widgets = ["recent", "categories", "taglist", "social"]
 
-[Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
-
-[params.widgets.social]
-  rss            = true 
-  twitter        = "https://twitter.com/xxKFZ1S"
-  github         = "https://github.com/xxkizashi"
-
-[[Menus.main]]
-  Name = "Home"
-  URL = "/"
-
-[[Menus.main]]
-  Name = "Posts"
-  URL = "/posts/"
+[Params.widgets.social]
+  twitter = "https://twitter.com/xxKFZ1S"
+  github = "https://github.com/xxkizashi"
