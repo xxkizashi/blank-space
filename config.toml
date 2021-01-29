@@ -18,7 +18,7 @@ googleAnalytics = ""
   post_navigation = true
   postSections = ["posts"]
   post_meta = ["date", "categories"] # Order of post meta information
-  highlightColor = "#000B8D"
+  highlightColor = "#1D19AC"
   customCSS = ["css/custom-font.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
 
