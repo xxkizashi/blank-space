@@ -8,21 +8,30 @@
     <language>ja-jp</language>
     <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World!</title>
-      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-hello-world/</link>
+      <title>MATLAB EXPO 2020への参加</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</link>
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-hello-world/</guid>
-      <description>Hello World!</description>
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
+      <description>そんなに大した内容ではありませんが，MATLAB EXPO 2020で発表させて頂きました． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところです． リンクはこちら．</description>
     </item>
     
     <item>
-      <title>Yeah</title>
-      <link>https://xxkizashi.github.io/blank-space/posts/2020-06-16-yeah/</link>
-      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      <title>学Fのリンク集</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://xxkizashi.github.io/blank-space/posts/2020-06-16-yeah/</guid>
-      <description>Yeah</description>
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</guid>
+      <description>学生フォーミュラで役立ちそうなリンク集を作りました．</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-28-hello-world/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-28-hello-world/</guid>
+      <description>自由気ままに書く場所を作りました．</description>
     </item>
     
   </channel>

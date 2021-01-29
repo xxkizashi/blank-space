@@ -1,7 +1,6 @@
 ---
 title: "Hello World!"
-date: "2021-01-29"
-description: "初めての投稿"
+date: "2021-01-28"
 categories:
   - "Tech"
 tags:
@@ -9,4 +8,4 @@ tags:
   - "Hugo"
 ---
 
-## Hello World!
+自由気ままに書く場所を作りました．

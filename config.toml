@@ -34,7 +34,7 @@ googleAnalytics = ""
 
 
 [Params.logo]
-  subtitle = "No Attach No Chance"
+  subtitle = "You only live once. Let's do it."
 
 [Params.sidebar]
   home = "right"   # Configure layout for home page
