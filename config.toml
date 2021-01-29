@@ -1,4 +1,5 @@
 baseURL = "https://xxkizashi.github.io/blank-space/"
+DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
 title = "Blank Space"
 theme = "Mainroad"
@@ -9,37 +10,34 @@ canonifyurls = true
 summaryLength = 120
 googleAnalytics = ""
 
-[Author] # Used in authorbox
+[Author]
   name = "xxkizashi"
-  bio = "TBA"
-  avatar = "img/me.png"
 
 [Params]
   description = "xxkizashi's personal blog about everything"
-    opengraph = true
   twitter_cards = false
-  readmore = false # Show "Read more" button in list if true
+  readmore = true
   authorbox = true
   pager = true
+  mathjax = true
   post_meta = ["date", "categories"] # Order of post meta information
   customCSS = ["css/custom-font.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
 
 [Params.logo]
-  subtitle = "No Attach No Chance" # Logo subtitle
+  subtitle = "No Attach No Chance"
 
 [Params.sidebar]
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist"]
+  widgets = ["search", "recent", "categories", "taglist", "social"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
   tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
 
-[params.social]
+[params.widgets.social]
   rss            = true 
   twitter        = "https://twitter.com/xxKFZ1S"
   github         = "https://github.com/xxkizashi"
@@ -52,6 +50,7 @@ googleAnalytics = ""
   Name = "Posts"
   URL = "/posts/"
 
-[[params.addtional_menus]]
-  title =  "About"
-  href =  "/top/about/"
+[taxonomies]
+	tag = "tags"
+	category = "categories"
+	archive = "archives"
