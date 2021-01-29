@@ -49,9 +49,5 @@ googleAnalytics = ""
   URL = "/"
 
 [[Menus.main]]
-  Name = "About"
-  URL = "/top/about/"
-
-[[Menus.main]]
   Name = "Posts"
   URL = "/posts/"
