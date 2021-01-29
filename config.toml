@@ -11,14 +11,15 @@ googleAnalytics = ""
 
 [Params]
   description = "xxkizashi's personal blog about everything"
-  twitter_cards = false
+  twitter_cards = true
+  twitterCardDomain = "xxkizashi.github.io"
+  twitterCardAuthor = "xxkizashi"
   readmore = true
   pager = true
   mathjax = true
   post_navigation = true
   postSections = ["posts"]
   post_meta = ["date", "categories"] # Order of post meta information
-  eyecatch = "images/eyecatch.jpg"
   highlightColor = "#1D19AC"
   customCSS = ["css/custom-font.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
