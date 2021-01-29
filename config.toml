@@ -49,8 +49,3 @@ googleAnalytics = ""
 [[Menus.main]]
   Name = "Posts"
   URL = "/posts/"
-
-[taxonomies]
-	tag = "tags"
-	category = "categories"
-	archive = "archives"
