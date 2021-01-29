@@ -1,0 +1,57 @@
+baseURL = "https://xxkizashi.github.io/blank-space/"
+languageCode = "ja-jp"
+title = "Blank Space"
+theme = "Mainroad"
+paginate = 10
+hasCJKLanguage = true
+publishDir = "docs"
+canonifyurls = true
+summaryLength = 120
+googleAnalytics = ""
+
+[Author] # Used in authorbox
+  name = "xxkizashi"
+  bio = "TBA"
+  avatar = "img/me.png"
+
+[Params]
+  description = "xxkizashi's personal blog about everything"
+    opengraph = true
+  twitter_cards = false
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true
+  pager = true
+  post_meta = ["date", "categories"] # Order of post meta information
+  customCSS = ["css/custom-font.css"] # Include custom CSS files
+  customJS = ["js/custom.js"] # Include custom JS files
+
+[Params.logo]
+  subtitle = "No Attach No Chance" # Logo subtitle
+
+[Params.sidebar]
+  home = "right"   # Configure layout for home page
+  list = "right"   # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+[params.social]
+  rss            = true 
+  twitter        = "https://twitter.com/xxKFZ1S"
+  github         = "https://github.com/xxkizashi"
+
+[[Menus.main]]
+  Name = "Home"
+  URL = "/"
+
+[[Menus.main]]
+  Name = "About"
+  URL = "/top/about/"
+
+[[Menus.main]]
+  Name = "Posts"
+  URL = "/posts/"
