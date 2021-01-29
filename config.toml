@@ -30,7 +30,7 @@ googleAnalytics = ""
 [[Menus.main]]
   Name = "FSAE"
   URL = "https://xxkizashi.github.io/FSAE_TO_WIN/"
-  weight = 3
+  weight = 5
 
 
 [Params.logo]
