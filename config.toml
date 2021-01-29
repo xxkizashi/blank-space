@@ -12,10 +12,6 @@ googleAnalytics = ""
 [Params]
   description = "xxkizashi's personal blog about everything"
   twitter_cards = true
-  twitterCardDomain = "xxkizashi.github.io"
-  twitterCardAuthor = "xxkizashi"
-  twitterID = "@xxKFZ1S"
-  images = "/img/eyecatch.jpg"
   readmore = true
   pager = true
   mathjax = true
@@ -39,6 +35,8 @@ googleAnalytics = ""
 
 [Params.logo]
   subtitle = "You only live once. Let's do it."
+  image = "img/eyecatch.jpg"
+  
 
 [Params.sidebar]
   home = "right"   # Configure layout for home page
