@@ -32,11 +32,8 @@ googleAnalytics = ""
   URL = "https://xxkizashi.github.io/FSAE_TO_WIN/"
   weight = 5
 
-
 [Params.logo]
   subtitle = "You only live once. Let's do it."
-  # image = "img/eyecatch.jpg"
-  
 
 [Params.sidebar]
   home = "right"   # Configure layout for home page
