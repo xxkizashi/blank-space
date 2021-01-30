@@ -7,7 +7,7 @@ menu: main
 weight: 3
 eyecatch: "/img/eyecatch.jpg"
 ---
-![my image](/img/me.jpg)
+![my image](me.jpg)
       
 ## My interest in engineering
 - Materials
