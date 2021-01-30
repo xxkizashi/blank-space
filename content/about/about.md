@@ -5,6 +5,7 @@ authorbox: false
 sidebar: false
 menu: main
 weight: 3
+eyecatch: "/img/eyecatch.jpg"
 ---
 ![my image](/img/me.jpg)
       

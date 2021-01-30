@@ -6,6 +6,7 @@ categories:
 tags:
   - "FSAE"
   - "MATLAB/Simlink"
+eyecatch: "/img/eyecatch.jpg"
 ---
 
 そんなに大した内容ではありませんが，MATLAB EXPO 2020でポスター発表させて頂きました．  
