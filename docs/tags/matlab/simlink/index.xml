@@ -8,10 +8,10 @@
     <language>ja-jp</language><atom:link href="https://xxkizashi.github.io/blank-space/tags/matlab/simlink/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MATLAB EXPO 2020への参加</title>
-      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/2021-01-29-matlab-expo/</link>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</link>
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/2021-01-29-matlab-expo/</guid>
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
       <description>そんなに大した内容ではありませんが，MATLAB EXPO 2020でポスター発表させて頂きました． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところです． リンクは</description>
     </item>
     

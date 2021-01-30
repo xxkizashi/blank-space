@@ -7,9 +7,9 @@ menu: main
 weight: 3
 eyecatch: "/img/eyecatch.jpg"
 ---
-![my image](me.jpg)
+![Mt. Adatara](me.jpg)
       
-## My interest in engineering
+## My Interest in Engineering
 - Materials
     - Nanotechnology
     - Material fabrication
