@@ -7,7 +7,7 @@ hasCJKLanguage = true
 publishDir = "docs"
 canonifyurls = true
 summaryLength = 120
-googleAnalytics = "G-N5SK15KKS3"
+googleAnalytics = ""
 
 [Params]
   description = "xxkizashi's personal blog about everything"
