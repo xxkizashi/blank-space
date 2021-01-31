@@ -6,7 +6,7 @@
     <description>Recent content on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://xxkizashi.github.io/blank-space/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://xxkizashi.github.io/blank-space/about/</guid>
       <description>My Interest in Engineering  Materials  Nanotechnology Material fabrication Microstructure control   Manufacturing technology Control engineering  Vehicle dynamics control   Electronics  </description>
+    </item>
+    
+    <item>
+      <title>ANSYS Fluentのバッチ処理</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
+      <description>ANSYS Fluent (2020 R1)で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました． その時のメモです． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case file</description>
     </item>
     
     <item>
