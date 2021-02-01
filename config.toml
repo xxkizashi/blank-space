@@ -15,6 +15,7 @@ googleAnalytics = ""
   readmore = true
   pager = true
   mathjax = true
+  googleFontsLink = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
   post_navigation = true
   postSections = ["posts"]
   post_meta = ["date", "categories"] # Order of post meta information
