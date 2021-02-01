@@ -20,7 +20,6 @@ googleAnalytics = ""
   post_meta = ["date", "categories"] # Order of post meta information
   highlightColor = "#33709d"
   customCSS = ["css/custom-font.css"] # Include custom CSS files
-  customJS = ["js/custom.js"] # Include custom JS files
 
 [[Menus.main]]
   Name = "Home"
