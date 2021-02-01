@@ -1,5 +1,6 @@
-body, h1, h2, h3, h4, h5, h6, .navbar-custom { 
-    font-family: Helvetica,"Sawarabi Gothic",Meiryo,"メイリオ","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN",YuGothic,"游ゴシック",Arial,sans-serif;
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('/css/font/Ubuntu-Bold.ttf') format('truetype');
 }
 body {
 	font-size: 16px;
@@ -9,8 +10,9 @@ body {
 code {
 	color: #DB4D6D;
 }
+ 
 .logo__title {
-	font-family: "Ubuntu", sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 48px;
 	font-size: 3rem;	
 }
