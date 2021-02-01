@@ -22,7 +22,7 @@
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
-      <description>ANSYS Fluent (2020 R1)で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました． その時のメモです． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case file</description>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました． その時のメモです． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用</description>
     </item>
     
     <item>

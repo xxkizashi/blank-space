@@ -1,0 +1,12 @@
+<header class="header">
+	<!-- thumbnailの設定 -->
+	<meta name="thumbnail" content="{{ if ( and (.IsPage) (.Params.eyecatch) )}}{{ .Site.BaseURL }}{{ .Params.eyecatch }}{{ else }}https://xxkizashi.github.io/blank-space/img/eyecatch.jpg{{ end }}"/>
+
+	<!-- twitter等用の設定 -->
+	<meta name="og:image" content="{{ if ( and (.IsPage) (.Params.eyecatch) )}}{{ .Site.BaseURL }}{{ .Params.eyecatch }}{{ else }}https://xxkizashi.github.io/blank-space/img/eyecatch.jpg{{ end }}" />
+	
+	<div class="container header__container">
+		{{ partial "logo.html" . }}
+		{{ partial "menu.html" . }}
+	</div>
+</header>
