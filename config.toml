@@ -38,7 +38,7 @@ googleAnalytics = ""
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  widgets = ["recent", "categories", "taglist", "social"]
+  widgets = ["recent", "categories", "taglist", "social", "search"]
 
 [Params.widgets.social]
   twitter = "xxKFZ1S"
