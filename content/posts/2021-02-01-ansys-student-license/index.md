@@ -17,9 +17,9 @@ ANSYS Studentのライセンスには期限がある．
 - Ansys Student 2020 R2 download for Windows x64 (6.3 GByte): Built-in license valid until 7/31/21
 
 ## 対処方法
-再インストールしてVersion upする．
+再インストールしてバージョンアップする．
 
-## Error Message
+## エラーメッセージ
 ```fluent: error message
 ANSYS LICENSE MANAGER ERROR:Capability Fluent Solver does not exist in the ANSYS licensing pool.
 The specified license path:
