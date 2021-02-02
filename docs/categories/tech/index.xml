@@ -13,7 +13,7 @@
       <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/</guid>
-      <description>COVID-19の感染拡大の影響を受け，弊学Fチームではオンライン作業が増えた． 情報共有を簡単にし作業効率化を図るためにGoogle Sitesでチーム内ポータルサイトを作った． 基本機能 メモ Google Formで書いて，Google Sheets経由で表</description>
+      <description>COVID-19の感染拡大の影響を受け，弊学Fチームではオンライン作業が増加した． 情報共有を簡単にし作業効率化を図るため，Google Sitesでチーム内ポータルサイトを作成した． 基本機能 メモ Google Formで書いて，Google Sheets経由</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
-      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用意する．</description>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変更している． 手順 case fileを用意する</description>
     </item>
     
     <item>

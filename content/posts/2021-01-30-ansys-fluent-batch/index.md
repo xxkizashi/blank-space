@@ -13,7 +13,7 @@ ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため
 
 **注意：  
 case fileを一括で作成できていない（やり方がよく分からない）．
-非常に面倒くさいが手動で一つ一つ条件を変えている．**
+非常に面倒くさいが手動で一つ一つ条件を変更している．**
 
 ## 手順
 1. case fileを用意する．  
@@ -51,7 +51,7 @@ exit
 
 ## 参考
 - ANSYS Fluent Text Command List  
-  particle-history-dataコマンドとかは参考になるかも．
+  particle-history-dataコマンドは参考になるかも．
 - [dynamicsoar's log - journal file を使った CUI での Fluent の実行について](https://dynamicsoar.hatenablog.com/entry/2017/05/23/121205)
 - [東京工業大学学術国際情報センター - ANSYS Fluent使用方法](https://helpdesk.t3.gsic.titech.ac.jp/manuals/ansys/fluent/)
 - [rescale - ANSYS Fluent Batch Tutorials](https://docs.rescale.com/articles/ansys-fluent-batch-tutorials/#ansys-fluent-in-batch-mode)
