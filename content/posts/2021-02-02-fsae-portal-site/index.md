@@ -1,5 +1,5 @@
 ---
-title: "Google Sitesを用いたポータルサイト"
+title: "Google Sitesを用いたポータルサイト作成"
 date: "2021-02-02"
 categories:
   - "Tech"
