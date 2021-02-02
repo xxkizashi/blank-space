@@ -1,5 +1,5 @@
 ---
-title: "ANSYS Studentライセンスの更新"
+title: "ANSYS Studentのライセンス更新"
 date: "2021-02-01"
 categories:
   - "Tech"
