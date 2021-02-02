@@ -1,5 +1,5 @@
 ---
-title: "学Fチーム内ポータルサイト"
+title: "Google Sitesを用いたポータルサイト"
 date: "2021-02-02"
 categories:
   - "Tech"
