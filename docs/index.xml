@@ -6,7 +6,7 @@
     <description>Recent content on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://xxkizashi.github.io/blank-space/about/</link>
@@ -17,12 +17,30 @@
     </item>
     
     <item>
+      <title>学Fチーム内ポータルサイト</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/</guid>
+      <description>COVID-19の感染拡大の影響を受け，弊学Fチームではオンライン作業が増えた． 情報共有を簡単にし作業効率化を図るためにGoogle Sitesでチーム内ポータルサイトを作った． 基本機能 メモ Google Formで書いて，Google Sheets経由で表</description>
+    </item>
+    
+    <item>
+      <title>ANSYS Studentライセンスの更新</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</guid>
+      <description>ANSYS Student 2020 R1でFluentを立ち上げたら，エラーメッセージが出た． 原因 ANSYS Studentのライセンスには期限がある． よく見たらダウンロード画面に書いてあった． Ansys Student 2020 R1 download for Windows x64 (5.8 GByte): Built-in license valid until 1/31/21 Ansys Student 2020 R2 download for Windows x64 (6.3 GByte): Built-in license valid until 7/31/21 対処方法 再インストールして</description>
+    </item>
+    
+    <item>
       <title>ANSYS Fluentのバッチ処理</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
-      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました． その時のメモです． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用</description>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用意する．</description>
     </item>
     
     <item>
@@ -31,7 +49,7 @@
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
-      <description>そんなに大した内容ではありませんが，MATLAB EXPO 2020でポスター発表させて頂きました． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところです． リンクは</description>
+      <description>そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところ． リンクはこちら</description>
     </item>
     
     <item>
@@ -40,7 +58,7 @@
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</guid>
-      <description>学生フォーミュラで役立ちそうなリンク集を作りました．</description>
+      <description>学生フォーミュラで役立ちそうなリンク集を作った．</description>
     </item>
     
     <item>
@@ -49,7 +67,7 @@
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-28-hello-world/</guid>
-      <description>自由気ままに書く場所を作りました．</description>
+      <description>自由気ままに書く場所を作った．</description>
     </item>
     
   </channel>

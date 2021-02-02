@@ -9,11 +9,11 @@ tags:
 eyecatch: "/img/eyecatch.jpg"
 ---
 
-そんなに大した内容ではありませんが，MATLAB EXPO 2020でポスター発表させて頂きました．  
+そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた．  
 内容としては
   - 弊学FチームにMATLAB/Simlink開発環境を導入した．
   - STM32 Nucleoで学Fマシンを動かせるようにした．  
 
-といったところです．    
+といったところ．    
 
 リンクは[こちら](https://www.matlabexpo.com/content/dam/mathworks/mathworks-dot-com/images/events/matlabexpo/jp/2020/poster-session-9-matlab-expo-iwakiri.pdf)

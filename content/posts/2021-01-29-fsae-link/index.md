@@ -8,4 +8,4 @@ tags:
 eyecatch: "/img/eyecatch.jpg"
 ---
 
-学生フォーミュラで役立ちそうな[リンク集](https://xxkizashi.github.io/FSAE_TO_WIN/)を作りました．
+学生フォーミュラで役立ちそうな[リンク集](https://xxkizashi.github.io/FSAE_TO_WIN/)を作った．

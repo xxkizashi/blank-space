@@ -6,14 +6,23 @@
     <description>Recent content in ANSYS on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/ansys/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/ansys/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ANSYS Studentライセンスの更新</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</guid>
+      <description>ANSYS Student 2020 R1でFluentを立ち上げたら，エラーメッセージが出た． 原因 ANSYS Studentのライセンスには期限がある． よく見たらダウンロード画面に書いてあった． Ansys Student 2020 R1 download for Windows x64 (5.8 GByte): Built-in license valid until 1/31/21 Ansys Student 2020 R2 download for Windows x64 (6.3 GByte): Built-in license valid until 7/31/21 対処方法 再インストールして</description>
+    </item>
+    
     <item>
       <title>ANSYS Fluentのバッチ処理</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
-      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました． その時のメモです． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用</description>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ． 注意： case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変えている． 手順 case fileを用意する．</description>
     </item>
     
   </channel>

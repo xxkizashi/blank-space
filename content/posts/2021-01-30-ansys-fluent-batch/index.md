@@ -8,8 +8,8 @@ tags:
 eyecatch: "/img/eyecatch.jpg"
 ---
 
-ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べました．
-その時のメモです．    
+ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた．
+その時のメモ．    
 
 **注意：  
 case fileを一括で作成できていない（やり方がよく分からない）．
@@ -48,9 +48,6 @@ yes
 
 exit
 ```
-
-## 感想
-資料が全然無くてよく分からん！
 
 ## 参考
 - ANSYS Fluent Text Command List  

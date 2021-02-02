@@ -9,5 +9,5 @@ tags:
 eyecatch: "/img/eyecatch.jpg"
 ---
 
-自由気ままに書く場所を作りました．      
+自由気ままに書く場所を作った．      
 ![sakura](sakura.jpg)
