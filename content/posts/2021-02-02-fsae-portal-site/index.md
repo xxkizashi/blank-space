@@ -8,8 +8,7 @@ tags:
 eyecatch: "/img/eyecatch.jpg"
 ---
 
-COVID-19の感染拡大の影響を受け，弊学Fチームではオンライン作業が増加した．  
-情報共有を簡単にし作業効率化を図るため，Google Sitesでチーム内ポータルサイトを作成した．
+Google Sitesでチーム内ポータルサイトを作成した．
 ![portal-site](portal-site.png)
 
 ## 基本機能
