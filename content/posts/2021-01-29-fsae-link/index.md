@@ -5,6 +5,7 @@ categories:
   - "Tech"
 tags:
   - "FSAE"
+  - "GitHub Pages"
 eyecatch: "/img/eyecatch.jpg"
 ---
 

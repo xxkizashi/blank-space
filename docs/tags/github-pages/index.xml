@@ -6,7 +6,16 @@
     <description>Recent content in GitHub Pages on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学Fのリンク集</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</guid>
+      <description>学生フォーミュラで役立ちそうなリンク集を作った．</description>
+    </item>
+    
     <item>
       <title>Hello World!</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2021-01-28-hello-world/</link>
