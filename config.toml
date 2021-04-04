@@ -10,12 +10,12 @@ summaryLength = 120
 googleAnalytics = ""
 
 [Params]
-  description = "xxkizashi's personal blog about everything"
+  description = "xxkizashi's personal blog"
   twitter_cards = true
   readmore = true
   pager = true
   mathjax = true
-  googleFontsLink = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+  googleFontsLink = "https://fonts.googleapis.com/css2?family=Ubuntu:wght@700"
   post_navigation = true
   postSections = ["posts"]
   post_meta = ["date", "categories"] # Order of post meta information

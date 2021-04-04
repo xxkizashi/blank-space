@@ -15,3 +15,10 @@ code {
 	font-size: 48px;
 	font-size: 3rem;	
 }
+
+pre,
+code,
+kbd,
+samp {
+	font-family: Consolas, Meiryo,"メイリオ"; 
+}
