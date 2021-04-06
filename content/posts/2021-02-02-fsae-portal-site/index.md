@@ -9,6 +9,7 @@ eyecatch: "/img/eyecatch.jpg"
 ---
 
 Google Sitesでチーム内ポータルサイトを作成した．
+
 ![portal-site](portal-site.png)
 
 ## 基本機能
