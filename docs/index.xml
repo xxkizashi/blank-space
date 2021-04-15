@@ -6,7 +6,7 @@
     <description>Recent content on Blank Space</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://xxkizashi.github.io/blank-space/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://xxkizashi.github.io/blank-space/about/</guid>
       <description>My Interest in Engineering  Materials  Nanotechnology Material fabrication Microstructure control   Manufacturing technology Control engineering  Vehicle dynamics control   Electronics  </description>
+    </item>
+    
+    <item>
+      <title>MATLAB Image Processing Toolboxを使ってクレーターを数える</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</guid>
+      <description>MATLAB Image Processing Toolboxを使って，下の画像のようにクレーターを数えた． 画像処理の流れ 対象画像には以下のような特徴がある． クレーターが完全な円ではない． クレーター外部と内部の明るさの差が小さい そこで対称性に依らずクレーターを検出するために，エッジ</description>
     </item>
     
     <item>
@@ -58,7 +67,7 @@
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
-      <description>そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところ． リンクはこちら</description>
+      <description>そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた． 内容としては 弊学FチームにMATLAB/Simulink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところ． リンクはこちら</description>
     </item>
     
     <item>

@@ -5,13 +5,13 @@ categories:
   - "Tech"
 tags:
   - "FSAE"
-  - "MATLAB/Simlink"
+  - "MATLAB/Simulink"
 eyecatch: "/img/eyecatch.jpg"
 ---
 
 そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた．  
 内容としては
-  - 弊学FチームにMATLAB/Simlink開発環境を導入した．
+  - 弊学FチームにMATLAB/Simulink開発環境を導入した．
   - STM32 Nucleoで学Fマシンを動かせるようにした．  
 
 といったところ．    

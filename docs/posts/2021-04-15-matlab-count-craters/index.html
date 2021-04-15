@@ -14,12 +14,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MATLAB/Simlink - Blank Space</title>
+	<title>MATLAB Image Processing Toolboxを使ってクレーターを数える - Blank Space</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MATLAB/Simlink"/>
-<meta name="twitter:description" content="xxkizashi&#39;s personal blog"/>
+<meta name="twitter:title" content="MATLAB Image Processing Toolboxを使ってクレーターを数える"/>
+<meta name="twitter:description" content="MATLAB Image Processing Toolboxを使って，下の画像のようにクレーターを数えた． 画像処理の流れ 対象画像には以下のような特徴がある． クレーターが完全な円ではない． クレーター外部と内部の明るさの差が小さい そこで対称性に依らずクレーターを検出するために，エッジ"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -28,7 +28,6 @@
 
 	<link rel="stylesheet" href="https://xxkizashi.github.io/blank-space/css/style.css">
 	<link rel="stylesheet" href="https://xxkizashi.github.io/blank-space/css/custom-font.css">
-	<link rel="alternate" type="application/rss+xml" href="https://xxkizashi.github.io/blank-space/tags/matlab/simlink/index.xml" title="Blank Space">
 
 	<link rel="shortcut icon" href="https://xxkizashi.github.io/blank-space/favicon.ico">
 		
@@ -39,10 +38,10 @@
 	<div class="container container--outer">
 		<header class="header">
 	
-	<meta name="thumbnail" content="https://xxkizashi.github.io/blank-space/img/eyecatch.jpg"/>
+	<meta name="thumbnail" content="https://xxkizashi.github.io/blank-space//img/eyecatch.jpg"/>
 
 	
-	<meta name="og:image" content="https://xxkizashi.github.io/blank-space/img/eyecatch.jpg" />
+	<meta name="og:image" content="https://xxkizashi.github.io/blank-space//img/eyecatch.jpg" />
 	
 	<div class="container header__container">
 		
@@ -89,36 +88,139 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">MATLAB/Simlink</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/" rel="bookmark">
-			MATLAB EXPO 2020への参加
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">MATLAB Image Processing Toolboxを使ってクレーターを数える</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-29T00:00:00Z">January 29, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://xxkizashi.github.io/blank-space/categories/tech/" rel="category">Tech</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-15T00:00:00Z">April 15, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://xxkizashi.github.io/blank-space/categories/tech/" rel="category">Tech</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		そんなに大した内容ではないが，MATLAB EXPO 2020でポスター発表させて頂いた． 内容としては 弊学FチームにMATLAB/Simlink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした． といったところ． リンクはこちら
-	</div>
-</article>
+		</header><div class="content post__content clearfix">
+			<p>MATLAB Image Processing Toolboxを使って，下の画像のようにクレーターを数えた．</p>
+<p><img src="result.png" alt="result"></p>
+<h2 id="画像処理の流れ">画像処理の流れ</h2>
+<p>対象画像には以下のような特徴がある．</p>
+<ul>
+<li>クレーターが完全な円ではない．</li>
+<li>クレーター外部と内部の明るさの差が小さい</li>
+</ul>
+<p>そこで対称性に依らずクレーターを検出するために，エッジ検出を主とした画像処理を施した．
+具体的な流れは下記の通りである．</p>
+<ol>
+<li>画像読み込み</li>
+<li>2次元適応フィルター処理によるノイズの除去</li>
+<li>コントラスト調整</li>
+<li>エッジの検出（キャニー法）</li>
+<li>膨張</li>
+<li>画像領域内部にある穴の塗りつぶし</li>
+<li>収縮</li>
+<li>小さなオブジェクトの削除</li>
+</ol>
+<h2 id="使用環境">使用環境</h2>
+<ul>
+<li>MATLAB R2020b</li>
+<li>Image Processing Toolbox</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
+<p>検出率は6~7割程度である．
+複数のクレーターを1つとカウントする，そもそも検出できてない等の課題があるが，手動カウントの補助程度には使えそう．</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://jp.mathworks.com/videos/appearance-check-measuring-size-and-count-washer-120567.html">外観検査: 画像から寸法・個数を瞬時に測定 (ワッシャーの検出)</a></li>
+<li><a href="https://jp.mathworks.com/help/images/detecting-a-cell-using-image-segmentation.html">エッジ検出とモルフォロジーを使用した細胞の検出</a></li>
+</ul>
+<h2 id="ソースコード">ソースコード</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-number_of_crater.m" data-lang="number_of_crater.m">clear all;
+close all;
+clc;
+
+<span style="color:#75715e">% 画像読み込み</span>
+I = imread(<span style="color:#e6db74">&#39;original.jpg&#39;</span>);
+imshow(I)
+title(<span style="color:#e6db74">&#39;Original Image&#39;</span>);
+
+<span style="color:#75715e">% ノイズ除去</span>
+K = wiener2(I,[<span style="color:#ae81ff">10</span> <span style="color:#ae81ff">10</span>]);
+imshow(K)
+
+
+<span style="color:#75715e">% コントラスト調整</span>
+J = imadjust(K);
+imshow(J)
+
+<span style="color:#75715e">% エッジ検出</span>
+[<span style="color:#f92672">~</span>,threshold] = edge(J,<span style="color:#e6db74">&#39;canny&#39;</span>);
+fudgeFactor = <span style="color:#ae81ff">0.8</span>;
+BWs = edge(J,<span style="color:#e6db74">&#39;canny&#39;</span>,threshold <span style="color:#f92672">*</span> fudgeFactor);
+imshow(BWs)
+
+<span style="color:#75715e">% 膨張</span>
+se90 = strel(<span style="color:#e6db74">&#39;line&#39;</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">90</span>);
+se0 = strel(<span style="color:#e6db74">&#39;line&#39;</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>);
+BWsdil = imdilate(BWs,[se90 se0]);
+imshow(BWsdil)
+
+<span style="color:#75715e">% 内部塗りつぶし</span>
+BWdfill = imfill(BWsdil,<span style="color:#e6db74">&#39;holes&#39;</span>);
+imshow(BWdfill)
+
+<span style="color:#75715e">% 収縮</span>
+seD = strel(<span style="color:#e6db74">&#39;diamond&#39;</span>,<span style="color:#ae81ff">5</span>);
+BWsero = imerode(BWdfill,seD);
+BWsero = imerode(BWsero,seD);
+imshow(BWsero)
+
+<span style="color:#75715e">% 小さなオブジェクト削除</span>
+BWfinal = bwareaopen(BWsero, <span style="color:#ae81ff">500</span>);
+
+<span style="color:#75715e">% 可視化</span>
+imshow(labeloverlay(I,BWfinal))
+title(<span style="color:#e6db74">&#39;Mask Over Original Image&#39;</span>)
+
+<span style="color:#75715e">% 数を測定</span>
+statsl = regionprops(BWfinal,<span style="color:#e6db74">&#39;Centroid&#39;</span>);
+Centroid = cat(<span style="color:#ae81ff">1</span>, statsl.Centroid);
+num = numel(Centroid(:,<span style="color:#ae81ff">1</span>))  <span style="color:#75715e">% クレーターの数</span>
+
+<span style="color:#75715e">% 画像を保存</span>
+FileName = strcat(datestr(datetime(<span style="color:#e6db74">&#39;now&#39;</span>)),<span style="color:#e6db74">&#39;__&#39;</span>,num2str(num),<span style="color:#e6db74">&#39;craters&#39;</span>,<span style="color:#e6db74">&#39;.png&#39;</span>)
+saveas(gcf,FileName)
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://xxkizashi.github.io/blank-space/tags/matlab/simulink/" rel="tag">MATLAB/Simulink</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
 </main>
 
 
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">ANSYS Fluent Meshing vs ANSYS Meshing</p>
+		</a>
+	</div>
+</nav>
+
+
 			</div>
-			
-<aside class="sidebar">
+			<aside class="sidebar">
 <div class="widget-recent widget">
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/">MATLAB Image Processing Toolboxを使ってクレーターを数える</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/">ANSYS Fluent Meshing vs ANSYS Meshing</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/">Google Sitesを用いたポータルサイト作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/">ANSYS Studentのライセンス更新</a></li>
@@ -146,7 +248,7 @@
 		<a class="widget-taglist__link widget__link btn" href="https://xxkizashi.github.io/blank-space/tags/fsae/" title="FSAE">FSAE</a>
 		<a class="widget-taglist__link widget__link btn" href="https://xxkizashi.github.io/blank-space/tags/github-pages/" title="GitHub Pages">GitHub Pages</a>
 		<a class="widget-taglist__link widget__link btn" href="https://xxkizashi.github.io/blank-space/tags/hugo/" title="Hugo">Hugo</a>
-		<a class="widget-taglist__link widget__link btn" href="https://xxkizashi.github.io/blank-space/tags/matlab/simlink/" title="MATLAB/Simlink">MATLAB/Simlink</a>
+		<a class="widget-taglist__link widget__link btn" href="https://xxkizashi.github.io/blank-space/tags/matlab/simulink/" title="MATLAB/Simulink">MATLAB/Simulink</a>
 	</div>
 </div>
 <div class="widget-social widget">
@@ -189,5 +291,7 @@
 </footer>
 	</div>
 <script async defer src="https://xxkizashi.github.io/blank-space/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>
