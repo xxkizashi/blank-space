@@ -47,3 +47,8 @@ googleAnalytics = ""
 [Params.widgets.social]
   twitter = "xxKFZ1S"
   github = "xxkizashi"
+
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
