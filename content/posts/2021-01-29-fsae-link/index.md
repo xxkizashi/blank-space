@@ -1,5 +1,5 @@
 ---
-title: "学Fのリンク集"
+title: "学生フォーミュラのリンク集"
 date: "2021-01-29"
 categories:
   - "Tech"

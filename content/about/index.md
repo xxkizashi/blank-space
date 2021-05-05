@@ -11,9 +11,6 @@ eyecatch: "/img/eyecatch.jpg"
       
 ## My Interest in Engineering
 - Materials
-    - Nanotechnology
-    - Material fabrication
-    - Microstructure control
 - Manufacturing technology
 - Control engineering
     - Vehicle dynamics control
