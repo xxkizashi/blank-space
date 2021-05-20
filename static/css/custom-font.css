@@ -10,10 +10,10 @@ code {
 	color: #DB4D6D;
 }
 .logo__title {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 700;
+	font-family: 'Libre Barcode 128', cursive;
 	font-size: 64px;
-	font-size: 4rem;	
+	font-size: 4rem;
+	font-weight: 400;
 }
 
 pre,
