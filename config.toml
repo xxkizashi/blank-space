@@ -10,7 +10,7 @@ summaryLength = 120
 googleAnalytics = ""
 
 [Params]
-  description = "xxkizashi's personal blog"
+  description = "xxkizashi's blog"
   twitter_cards = true
   readmore = true
   pager = true
@@ -18,7 +18,7 @@ googleAnalytics = ""
   googleFontsLink = "https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap"
   post_navigation = true
   postSections = ["posts"]
-  post_meta = ["date", "categories"] # Order of post meta information
+  post_meta = ["date"] # Order of post meta information
   highlightColor = "#33709d"
   customCSS = ["css/custom-font.css"] # Include custom CSS files
 
@@ -39,7 +39,7 @@ googleAnalytics = ""
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  widgets = ["recent", "categories", "taglist", "social", "search"]
+  widgets = ["recent", "taglist", "social", "search"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget

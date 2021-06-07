@@ -5,6 +5,7 @@ categories:
   - "Presentation"
 tags:
   - "FSAE"
+  - "Presentation"
 eyecatch: "/img/eyecatch.jpg"
 ---
 ## 参考動画
