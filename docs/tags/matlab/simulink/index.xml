@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MATLAB/Simulink on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/matlab/simulink/</link>
+    <description>Recent content in MATLAB/Simulink on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://xxkizashi.github.io/blank-space/tags/matlab/simulink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATLABのグラフ設定</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-02-17-matlab-graph/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-02-17-matlab-graph/</guid>
+      <description>概要 同一座標軸に複数データをプロットしたグラフの作成例
+ソースコード clear all; close all; clc; % Parameters fontname = &amp;#39;Arial&amp;#39; fontsize = 20; color = &amp;#39;k&amp;#39;; % Load files filename = &amp;#39;original_filename&amp;#39;; load(strcat(filename,&amp;#39;.mat&amp;#39;)); % Plot figure; plot(data.Distance,data.element01,&amp;#39;-bo&amp;#39;,data.Distance,data.element02,&amp;#39;-r^&amp;#39;,&amp;#39;LineWidth&amp;#39;,2,&amp;#39;MarkerSize&amp;#39;,6); % Grid grid off; % Axis limits axis([0 800 0 100]); % Legend legend(&amp;#39;Element01&amp;#39;, &amp;#39;Element02&amp;#39;,&amp;#39;Fontsize&amp;#39;,fontsize,&amp;#39;FontName&amp;#39;,fontname,&amp;#39;TextColor&amp;#39;,color); % Axis xlabel(&amp;#39;Distance (nm)&amp;#39;,&amp;#39;FontSize&amp;#39;,fontsize,&amp;#39;FontName&amp;#39;,fontname,&amp;#39;Color&amp;#39;,color); ylabel(&amp;#39;Atom (%)&amp;#39;,&amp;#39;FontSize&amp;#39;,fontsize,&amp;#39;FontName&amp;#39;,fontname,&amp;#39;Color&amp;#39;,color); ax = gca; ax.FontName = fontname; ax.FontSize = fontsize; ax.GridColor = color; ax.MinorGridColor = color; ax.LineWidth = 2; </description>
+    </item>
+    
+    <item>
+      <title>エンジン音のスペクトログラム</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-09-24-engine-sound-analysis/</link>
+      <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-09-24-engine-sound-analysis/</guid>
+      <description>マイク  Google Pixel 4a  解析対象  バイク  125cc 単気筒 4ストローク NA   F1  2.4L V8 4ストローク NA   ブルーインパルス  ターボファン・エンジン    バイク  1100rpm     5000rpm     Revving    F1 ブルーインパルス  使用環境  MATLAB R2020a Signal Processing Toolbox  参考  MathWorks - オーディオとビデオ MathWorks - spectrogram Wikipedia - 短時間フーリエ変換 MATLABによる音声信号処理入門  ソースコード clear all; close all; clc; % ファイル名 filename = &amp;#39;filename&amp;#39;; % オーディオファイルに関する情報取得 info = audioinfo(filename) % オーディオファイル読み込み（5秒分だけ） samples = [1,5*info.</description>
+    </item>
+    
+    <item>
+      <title>MATLABでクレーターを数える</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</guid>
+      <description>画像処理の流れ 対象画像には以下のような特徴がある．
+ クレーターが完全な円ではない． クレーター外部と内部の明るさの差が小さい  そこで対称性に依らずクレーターを検出するために，エッジ検出を主とした画像処理を施した． 具体的な流れは下記の通りである．
+ 画像読み込み 2次元適応フィルター処理によるノイズの除去 コントラスト調整 エッジの検出（キャニー法） 膨張 画像領域内部にある穴の塗りつぶし 収縮 小さなオブジェクトの削除  まとめ 検出率は6~7割程度である． 複数のクレーターを1つとカウントする，そもそも検出できてない等の課題があるが，手動カウントの補助程度には使えそう．
+使用環境  MATLAB R2020b Image Processing Toolbox  参考  MathWorks - 外観検査: 画像から寸法・個数を瞬時に測定 (ワッシャーの検出) MathWorks - エッジ検出とモルフォロジーを使用した細胞の検出  ソースコード clear all; close all; clc; % 画像読み込み I = imread(&amp;#39;original.jpg&amp;#39;); imshow(I) title(&amp;#39;Original Image&amp;#39;); % ノイズ除去 K = wiener2(I,[10 10]); imshow(K) % コントラスト調整 J = imadjust(K); imshow(J) % エッジ検出 [~,threshold] = edge(J,&amp;#39;canny&amp;#39;); fudgeFactor = 0.</description>
+    </item>
+    
+    <item>
+      <title>MATLAB EXPO 2020への参加</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
+      <description>MATLAB EXPO 2020でポスター発表させて頂いた．
+内容は以下の通り
+ 弊学生フォーミュラチームにMATLAB/Simulink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした．  リンクはこちら</description>
+    </item>
+    
+  </channel>
+</rss>

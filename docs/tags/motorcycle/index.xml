@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Motorcycle on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/motorcycle/</link>
+    <description>Recent content in Motorcycle on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/motorcycle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>スロットル・クラッチワイヤ調整</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2023-04-16-motorcycle-throttle-wire/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2023-04-16-motorcycle-throttle-wire/</guid>
+      <description>スロットルワイヤ調整履歴  約10400km  右側のカウルを外す     クラッチワイヤ調整履歴  ?km 約10400km  </description>
+    </item>
+    
+    <item>
+      <title>タイヤ交換（バイク）</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-12-18-motorcycle-tyre/</link>
+      <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-12-18-motorcycle-tyre/</guid>
+      <description>タイヤ交換履歴  約8500km（リアのみ）  型番：IRC MOBICITY SCT-001 130/70-12 62L 122542 メモ  手組にトライした．色々手間取りほぼ1日かかった．ホイールのリムを傷つけずに作業するのは結構難しい． 最後の組付け時にハブ/ホイール間のスリーブ↓を忘れて作業をやり直した&amp;hellip;       1. 約xxxxxkm 型番  エアバルブ：Dunlop PVR-70 208271 タイヤレバー/リムプロテクター：デイトナ タイヤレバーセット95397 タイヤレバー：エーモン タイヤレバー 全長360mm T767 ビードブレーカー：アストロプロダクツ モーターサイクルビードブレーカー 2007000011263 ビードワックス：マルニ工業 ビードワックス40g B.PW-109  参考  Dunlop - Dictionary of TYRE  </description>
+    </item>
+    
+    <item>
+      <title>エンジンオイル交換（バイク）</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-11-19-motorcycle-oil/</link>
+      <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-11-19-motorcycle-oil/</guid>
+      <description>エンジンオイル交換履歴  約1000km（初回），オイルフィルター交換 約4000km  7558km  約10500km   型番  エンジンオイル：Honda ウルトラ G1 SL 5W-30 1L ドレンワッシャー：デイトナ ドレンワッシャー M12 厚さ1.7mm 10枚入り 75420 オイルフィルター：KITACO オイルエレメント H-06（KITACO K-PIT オイル交換フルセットを購入）  参考  Honda - 定期交換部品について  </description>
+    </item>
+    
+    <item>
+      <title>シールチェーン化</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-11-06-motorcycle-chain/</link>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-11-06-motorcycle-chain/</guid>
+      <description>メモ  型番：RK JAPAN GV420MRU（リンク数：108）  取り外し後の純正チェーン（走行距離：約7000km）   参考  D.I.D - MAINTENANCE  </description>
+    </item>
+    
+    <item>
+      <title>エンジン音のスペクトログラム</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-09-24-engine-sound-analysis/</link>
+      <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-09-24-engine-sound-analysis/</guid>
+      <description>マイク  Google Pixel 4a  解析対象  バイク  125cc 単気筒 4ストローク NA   F1  2.4L V8 4ストローク NA   ブルーインパルス  ターボファン・エンジン    バイク  1100rpm     5000rpm     Revving    F1 ブルーインパルス  使用環境  MATLAB R2020a Signal Processing Toolbox  参考  MathWorks - オーディオとビデオ MathWorks - spectrogram Wikipedia - 短時間フーリエ変換 MATLABによる音声信号処理入門  ソースコード clear all; close all; clc; % ファイル名 filename = &amp;#39;filename&amp;#39;; % オーディオファイルに関する情報取得 info = audioinfo(filename) % オーディオファイル読み込み（5秒分だけ） samples = [1,5*info.</description>
+    </item>
+    
+    <item>
+      <title>ヘルメットロック取付け</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-08-31-motorcycle-helmet-lock/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-08-31-motorcycle-helmet-lock/</guid>
+      <description>材料  KIJIMA - ヘルメットロック本体のみ × 1 ロックナット (M6) × 1 ステー - 補強金具 (L:150mm) × 1 ボルト (M8×50) × 2 スペーサー (M8×20) × 2 ワッシャー (M8) × 6  ステーの加工  ヘルメットロック本体固定用穴あけ → Φ6 ヘルメットロック回り止め用穴あけ → Φ4 ステー固定用穴あけ → Φ8（片側は長円）  取付け シート下の車両左側キャップを外し，ねじ穴に取り付ける．
+注意  取付時はグリスアップする． ガルバニック腐食の原因となるため，ステンレスは使わない．  参考：ステンレス協会 - ステンレスと異種金属との接触についての問題点   最初は四三酸化鉄皮膜（黒染め）六角穴付ボルトを使用していたが，3ヶ月で錆びてしまった．その後キタコ・コンビニパーツのフランジ付六角ボルト（ユニクロメッキ）に変更した．  </description>
+    </item>
+    
+  </channel>
+</rss>

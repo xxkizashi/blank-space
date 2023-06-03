@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Research on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/research/</link>
+    <description>Recent content in Research on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>研究活動において役立ったツール</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-03-30-research/</link>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-03-30-research/</guid>
+      <description>ブックマークの整理が主目的である．
+基本的なツール  Google Scholar
+論文検索 EndNote
+文献管理 MATLAB/Simulink
+グラフ作成等 Adobe Photoshop
+観察像結合 Adobe Illustrator
+図の作成 Grammarly
+英文校正 diagrams.net
+フローチャート作成  プラスα  Wolfram Alpha TeXclip Mathpix Snip タイミングチャート清書サービス  </description>
+    </item>
+    
+    <item>
+      <title>伝わるプレゼン資料の作り方</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-04-24-presentation/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-04-24-presentation/</guid>
+      <description>これらの動画を見ればプレゼン資料の質がupするはず． 以下に南先生の動画を共有させて頂く．
+  便利なサイト  いらすとや human pictogram 2.0 EXPERIENCE JAPAN PICTOGRAMS DOTOWN SlideShare Speaker Deck  </description>
+    </item>
+    
+    <item>
+      <title>MATLABでクレーターを数える</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-04-15-matlab-count-craters/</guid>
+      <description>画像処理の流れ 対象画像には以下のような特徴がある．
+ クレーターが完全な円ではない． クレーター外部と内部の明るさの差が小さい  そこで対称性に依らずクレーターを検出するために，エッジ検出を主とした画像処理を施した． 具体的な流れは下記の通りである．
+ 画像読み込み 2次元適応フィルター処理によるノイズの除去 コントラスト調整 エッジの検出（キャニー法） 膨張 画像領域内部にある穴の塗りつぶし 収縮 小さなオブジェクトの削除  まとめ 検出率は6~7割程度である． 複数のクレーターを1つとカウントする，そもそも検出できてない等の課題があるが，手動カウントの補助程度には使えそう．
+使用環境  MATLAB R2020b Image Processing Toolbox  参考  MathWorks - 外観検査: 画像から寸法・個数を瞬時に測定 (ワッシャーの検出) MathWorks - エッジ検出とモルフォロジーを使用した細胞の検出  ソースコード clear all; close all; clc; % 画像読み込み I = imread(&amp;#39;original.jpg&amp;#39;); imshow(I) title(&amp;#39;Original Image&amp;#39;); % ノイズ除去 K = wiener2(I,[10 10]); imshow(K) % コントラスト調整 J = imadjust(K); imshow(J) % エッジ検出 [~,threshold] = edge(J,&amp;#39;canny&amp;#39;); fudgeFactor = 0.</description>
+    </item>
+    
+    <item>
+      <title>ANSYS Fluent Meshing vs ANSYS Meshing</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/</guid>
+      <description>ANSYS Fluent用のメッシュ作成であれば，ANSYS MeshingよりもANSYS FLuent Meshingを使った方が良さそう． 理由は下記の通り．
+ 最低限の設定のみで高品質なメッシュ作成が可能
+私の環境では同じモデルでも特に工夫せず直交品質が改善した．（0.1 → 0.2） ワークフローが分かりやすい．  </description>
+    </item>
+    
+    <item>
+      <title>ANSYS Studentのライセンス更新</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</guid>
+      <description>ANSYS Student 2020 R1でFluentを立ち上げたら，エラーメッセージが出た．
+原因 ANSYS Studentのライセンスには期限がある．
+ダウンロード画面に記載されていた．
+ Ansys Student 2020 R1 download for Windows x64 (5.8 GByte): Built-in license valid until 1/31/21 Ansys Student 2020 R2 download for Windows x64 (6.3 GByte): Built-in license valid until 7/31/21  対処方法 再インストールしてバージョンアップする．
+エラーメッセージ ANSYS LICENSE MANAGER ERROR:Capability Fluent Solver does not exist in the ANSYS licensing pool. The specified license path: ANSYSLI_SERVERS: FLEXlm Servers: C:\PROGRA~1\ANSYSI~1\ANSYSS~1\Shared Files\Licensing\student.lic does not have any licenses for any product.</description>
+    </item>
+    
+    <item>
+      <title>ANSYS Fluentのバッチ処理</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ．
+注意：
+case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変更している．
+手順  case fileを用意する．
+C:\作業フォルダ\プロジェクト名\プロジェクト名_files\dp0\FFF\Fluent\ journal fileを上記のディレクトリに入れる． ANSYS Workbench &amp;gt; 解析実行を選択
+この時 &amp;ldquo;Upstream data of this cell has changed. Do you want to refresh this cell using upstream mesh and setting?&amp;rdquo; と聞かれるが，&amp;ldquo;いいえ&amp;quot;を選択 Fluentでファイル &amp;gt; 読み込み &amp;gt; ジャーナルを選択 journal file(.jou)を実行  journal fileの具体例 所々に &amp;ldquo;yes&amp;rdquo; があるのは，ファイルを保存するのかどうかをFluent側が毎度確認してくるから．
+/file/read-case FFF_He_300K_Cu10um_04MPa.cas.gz /solve/initialize/initialize-flow /solve/iterate 1000 /file/write-case FFF_He_300K_Cu10um_04MPa.cas yes /file/write-data FFF_He_300K_Cu10um_04MPa.dat yes /file/read-case FFF_He_300K_Cu5um_04MPa.cas.gz yes /solve/initialize/initialize-flow /solve/iterate 1000 /file/write-case FFF_He_300K_Cu5um_04MPa.</description>
+    </item>
+    
+  </channel>
+</rss>

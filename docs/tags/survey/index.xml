@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Survey on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/survey/</link>
+    <description>Recent content in Survey on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/survey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EVの充電器について</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-07-11-ev-charger/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-07-11-ev-charger/</guid>
+      <description>参考  Charging station (Wikipedia)  Combined Charging System (Wikipedia) CHAdeMO (Wikipedia) GB/T charging standard (Wikipedia) ChaoJi (Wikipedia)   IEEE Xplore - &amp;ldquo;Fast and Ultra-Fast Charging for Battery Electric Vehicles – A Review&amp;rdquo; IEEE Xplore - &amp;ldquo;Implementation of dynamic charging and V2G using Chademo and CCS/Combo DC charging standard&amp;rdquo; California Energy Commission - &amp;ldquo;Electric Vehicle Charging Infrastructure Assessment&amp;rdquo; GOV.UK - &amp;ldquo;Electric vehicle charging market study: final report&amp;rdquo; Vector - スマート充電 Car Watch - 日本発充電方式「CHAdeMO」は、安全と低コストを目指した規格 MONOist - EV用充電器の通信規格ISO/IEC 15118とは MONOist - 「ChaoJi（チャオジ）」は超急速充電の世界統一規格となるのか  </description>
+    </item>
+    
+  </channel>
+</rss>

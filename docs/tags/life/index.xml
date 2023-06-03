@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Life on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/life/</link>
+    <description>Recent content in Life on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>引越しのtoDoList</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-03-29-moving/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-03-29-moving/</guid>
+      <description>Google ToDo リストに残っていた分だけなので，全ては網羅できていない．
+移動前  引越し業者の見積もりを取る→予約 退去日を大家さんに伝える 電気・ガスの解約手続き 各学会の退会手続き 新規銀行口座開設 バイクの廃車手続き ※2022/08/21追記：新住所で廃車&amp;amp;登録手続きを一度に行うことも可能 郵便局の転送届 データのバックアップ 家電・粗大ごみを持ち込み処分 転出届  移動後  転入届 バイク登録手続き 運転免許証住所変更 銀行口座・クレジットカードの住所変更 各種アカウントの住所変更  </description>
+    </item>
+    
+    <item>
+      <title>就活を数字で振り返る</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-06-07-job-hunting/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-06-07-job-hunting/</guid>
+      <description>  始まりから終わりまで：丸1年間
+  イベント等へ参加した企業数：18社
+このうち複数回にわたってイベント等へ参加した企業数：10社
+  現地開催のイベント参加回数：1回
+他は全てオンラインだった．
+  就活関連の予定が入った日数：72日
+  送信したメール数：55通
+  ESを書いた回数：11回
+  面接回数：13回
+  </description>
+    </item>
+    
+  </channel>
+</rss>

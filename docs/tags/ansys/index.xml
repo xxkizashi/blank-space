@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ANSYS on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/ansys/</link>
+    <description>Recent content in ANSYS on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/ansys/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ANSYS Fluent Meshing vs ANSYS Meshing</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-16-ansys-fluent-meshing-ansys-meshing/</guid>
+      <description>ANSYS Fluent用のメッシュ作成であれば，ANSYS MeshingよりもANSYS FLuent Meshingを使った方が良さそう． 理由は下記の通り．
+ 最低限の設定のみで高品質なメッシュ作成が可能
+私の環境では同じモデルでも特に工夫せず直交品質が改善した．（0.1 → 0.2） ワークフローが分かりやすい．  </description>
+    </item>
+    
+    <item>
+      <title>ANSYS Studentのライセンス更新</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-01-ansys-student-license/</guid>
+      <description>ANSYS Student 2020 R1でFluentを立ち上げたら，エラーメッセージが出た．
+原因 ANSYS Studentのライセンスには期限がある．
+ダウンロード画面に記載されていた．
+ Ansys Student 2020 R1 download for Windows x64 (5.8 GByte): Built-in license valid until 1/31/21 Ansys Student 2020 R2 download for Windows x64 (6.3 GByte): Built-in license valid until 7/31/21  対処方法 再インストールしてバージョンアップする．
+エラーメッセージ ANSYS LICENSE MANAGER ERROR:Capability Fluent Solver does not exist in the ANSYS licensing pool. The specified license path: ANSYSLI_SERVERS: FLEXlm Servers: C:\PROGRA~1\ANSYSI~1\ANSYSS~1\Shared Files\Licensing\student.lic does not have any licenses for any product.</description>
+    </item>
+    
+    <item>
+      <title>ANSYS Fluentのバッチ処理</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-30-ansys-fluent-batch/</guid>
+      <description>ANSYS Fluent (2020 R1) で複数条件の解析を回す必要があったため，バッチ処理方法について色々調べた． その時のメモ．
+注意：
+case fileを一括で作成できていない（やり方がよく分からない）． 非常に面倒くさいが手動で一つ一つ条件を変更している．
+手順  case fileを用意する．
+C:\作業フォルダ\プロジェクト名\プロジェクト名_files\dp0\FFF\Fluent\ journal fileを上記のディレクトリに入れる． ANSYS Workbench &amp;gt; 解析実行を選択
+この時 &amp;ldquo;Upstream data of this cell has changed. Do you want to refresh this cell using upstream mesh and setting?&amp;rdquo; と聞かれるが，&amp;ldquo;いいえ&amp;quot;を選択 Fluentでファイル &amp;gt; 読み込み &amp;gt; ジャーナルを選択 journal file(.jou)を実行  journal fileの具体例 所々に &amp;ldquo;yes&amp;rdquo; があるのは，ファイルを保存するのかどうかをFluent側が毎度確認してくるから．
+/file/read-case FFF_He_300K_Cu10um_04MPa.cas.gz /solve/initialize/initialize-flow /solve/iterate 1000 /file/write-case FFF_He_300K_Cu10um_04MPa.cas yes /file/write-data FFF_He_300K_Cu10um_04MPa.dat yes /file/read-case FFF_He_300K_Cu5um_04MPa.cas.gz yes /solve/initialize/initialize-flow /solve/iterate 1000 /file/write-case FFF_He_300K_Cu5um_04MPa.</description>
+    </item>
+    
+  </channel>
+</rss>

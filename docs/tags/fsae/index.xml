@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FSAE on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/fsae/</link>
+    <description>Recent content in FSAE on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 31 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/fsae/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BMSについて</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/</guid>
+      <description>BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．
+ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905.</description>
+    </item>
+    
+    <item>
+      <title>学生フォーミュラチームへのSlack導入</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-10-27-fsae-slack/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-10-27-fsae-slack/</guid>
+      <description>後輩と協力して弊チームにSlackを導入した．
+作ったチャンネル一覧 チャンネル名について 見やすさや使いやすさに関わるので明確なルールを設けた．
+ 全体連絡 → #general 全体の雑談 → #random プロジェクト → proj- チーム → team- イベント（飲み会など）→ event- times（独り言用）→ times- ヘルプ → help- 補助チャンネル → zt- ただの雑談 → zz-  参考  slack help center - チュートリアル slack help center - チャンネル名のガイドラインを作成する  </description>
+    </item>
+    
+    <item>
+      <title>伝わるプレゼン資料の作り方</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-04-24-presentation/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-04-24-presentation/</guid>
+      <description>これらの動画を見ればプレゼン資料の質がupするはず． 以下に南先生の動画を共有させて頂く．
+  便利なサイト  いらすとや human pictogram 2.0 EXPERIENCE JAPAN PICTOGRAMS DOTOWN SlideShare Speaker Deck  </description>
+    </item>
+    
+    <item>
+      <title>チーム内ポータルサイト作成</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-02-02-fsae-portal-site/</guid>
+      <description>Google Sitesを選んだ理由  大学がG Suitを契約しており，チームメンバー全員が大学のGoogleアカウントを所有していたから． チームとしてでGoogleアカウントを所有していたから．  チームのGoogle Calendar，Google Drive，Google Forms，Google Sheets等と連携できる． このポータルサイトをチームのGoogleアカウントに紐づければ，チームメンバー全員が管理できる．    基本機能  メモ  Google Formで書いて，Google Sheets経由で表示する．   Google Meetへの参加ボタン  普段のミーティングだけでなく，突発的な雑談でも簡単に使用できる．   活動計画の表示  アクセス権限  Google Sitesのアクセス権限はチームメンバーのGoogleアカウントのみに設定 Google Calendarも同様（Google Site内でGoogle Calendarを表示させるため）  </description>
+    </item>
+    
+    <item>
+      <title>MATLAB EXPO 2020への参加</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-matlab-expo/</guid>
+      <description>MATLAB EXPO 2020でポスター発表させて頂いた．
+内容は以下の通り
+ 弊学生フォーミュラチームにMATLAB/Simulink開発環境を導入した． STM32 Nucleoで学Fマシンを動かせるようにした．  リンクはこちら</description>
+    </item>
+    
+    <item>
+      <title>学生フォーミュラのリンク集</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-01-29-fsae-link/</guid>
+      <description>学生フォーミュラで役立ちそうなリンク集を作った．</description>
+    </item>
+    
+  </channel>
+</rss>

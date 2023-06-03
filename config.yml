@@ -1,0 +1,84 @@
+baseURL: "https://xxkizashi.github.io/blank-space/"
+title: BlankSpace
+paginate: 5
+theme: PaperMod
+publishDir: "docs"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+googleAnalytics: G-N5SK15KKS3
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+outputs:
+    home:
+        - HTML
+        - JSON # is necessary
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: BlankSpace
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  ShowReadingTime: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  disableSpecial1stPost: false
+  disableScrollToTop: True
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  images:
+  - eyecatch.jpg
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Just a Memo"
+  
+  assets:
+    favicon: "favicon.ico"
+
+  analytics:
+    google:
+      SiteVerificationTag: "G-N5SK15KKS3"
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+    
+menu:
+  main:
+    - name: Archive
+      url: archives
+      weight: 5
+    - name: Tags
+      url: tags/
+      weight: 10
+    - name: Search
+      url: search/
+      weight: 15
+    - name: FSAE Links
+      url: https://xxkizashi.github.io/FSAE_TO_WIN/
+      weight: 20
+markup:
+    goldmark:
+        renderer:
+            unsafe: true

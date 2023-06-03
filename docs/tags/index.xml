@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/</link>
+    <description>Recent content in Tags on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Car</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/car/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/car/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motorcycle</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/motorcycle/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/motorcycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Survey</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/survey/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/survey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FSAE</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/fsae/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/fsae/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/research/</link>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/life/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laser cutter</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/laser-cutter/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/laser-cutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ANSYS</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/ansys/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/ansys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub Pages</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/github-pages/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/hugo/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MATLAB/Simulink</title>
+      <link>https://xxkizashi.github.io/blank-space/tags/matlab/simulink/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/tags/matlab/simulink/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

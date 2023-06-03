@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Laser cutter on BlankSpace</title>
+    <link>https://xxkizashi.github.io/blank-space/tags/laser-cutter/</link>
+    <description>Recent content in Laser cutter on BlankSpace</description>
+    <image>
+      <url>https://xxkizashi.github.io/blank-space/eyecatch.jpg</url>
+      <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/laser-cutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>レーザーカッターでコースターを作った</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2021-11-10-laser-cutter-coasters/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2021-11-10-laser-cutter-coasters/</guid>
+      <description>加工データ作成ソフト  Adobe Illustrator 25 (2021)  材料  MDF (厚さ5.5mm)  使用装置  trotec - Speedy100  加工条件    Parameters Settings     Power [%] 100   Speed [%] 0.5   Frequency [Hz] 1000   Pass [count] 1   Air Assist On   Z-offset [mm] 0    参考  trotec - 取扱説明書 （操作マニュアル） trotec - パラメーター設定の各項目にはどのような意味がありますか？  </description>
+    </item>
+    
+  </channel>
+</rss>

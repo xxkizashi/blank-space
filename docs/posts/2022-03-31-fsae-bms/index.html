@@ -1,0 +1,221 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>BMSについて | BlankSpace</title><meta name=keywords content="FSAE,C++"><meta name=description content="BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．
+ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905."><meta name=author content><link rel=canonical href=https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/><meta name=google-site-verification content="G-N5SK15KKS3"><link crossorigin=anonymous href=/blank-space/assets/css/stylesheet.min.e21185e6c4b43ff34c81666f70aa4f80140274057866888c0a5c28addc9b7fd2.css integrity="sha256-4hGF5sS0P/NMgWZvcKpPgBQCdAV4ZoiMClwordybf9I=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/blank-space/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w=" onload=hljs.initHighlightingOnLoad();></script><link rel=icon href=https://xxkizashi.github.io/blank-space/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://xxkizashi.github.io/blank-space/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://xxkizashi.github.io/blank-space/favicon-32x32.png><link rel=apple-touch-icon href=https://xxkizashi.github.io/blank-space/apple-touch-icon.png><link rel=mask-icon href=https://xxkizashi.github.io/blank-space/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme: rgb(29, 30, 32);--entry: rgb(46, 46, 51);--primary: rgb(218, 218, 219);--secondary: rgb(155, 156, 157);--tertiary: rgb(65, 66, 68);--content: rgb(196, 196, 197);--hljs-bg: rgb(46, 46, 51);--code-bg: rgb(55, 56, 62);--border: rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','G-N5SK15KKS3','auto');ga('send','pageview');}</script><meta property="og:title" content="BMSについて"><meta property="og:description" content="BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．
+ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905."><meta property="og:type" content="article"><meta property="og:url" content="https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/"><meta property="og:image" content="https://xxkizashi.github.io/blank-space/eyecatch.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-03-31T00:00:00+00:00"><meta property="article:modified_time" content="2022-03-31T00:00:00+00:00"><meta property="og:site_name" content="BlankSpace"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://xxkizashi.github.io/blank-space/eyecatch.jpg"><meta name=twitter:title content="BMSについて"><meta name=twitter:description content="BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．
+ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://xxkizashi.github.io/blank-space/posts/"},{"@type":"ListItem","position":2,"name":"BMSについて","item":"https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"BMSについて","name":"BMSについて","description":"BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．\nハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905.","keywords":["FSAE","C++"],"articleBody":"BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．\nハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905.sch Board: BMS_20200905.brd   最新版（配置等の微修正，実機未検証）  Schematic: BMS_20201230.sch Board: BMS_20201230.brd      ソフトウェア  Mbed  プログラムのコンパイルに使用した． チュートリアル：mbedを始めましょう！(“Let’s get started!” in Japanese)   Tera Term  NucleoとPCをUSBで繋ぎ，セル電圧およびセル温度を測定する際に使用した．    Tera Termでの表示 Newline code(改行コード) : LF\nソースコード（オリジナルの部分のみ） 諸事情により\"????“としている部分がある． 関数等はLTC6804-1/ツール/Linduinoを参照．\n// ----------Variable declaration---------- // I/O settings SPI spi(D11, D12, D13); // MOSI, MISO, SCLK DigitalOut cs_spi(D10); // CS for LTC6804-1 DigitalOut cs_thr00(D5); // CS for ADC00 (Thermistor) DigitalOut cs_thr01(D6); // CS for ADC01 (Thermistor) DigitalOut cs_thr02(D7); // CS for ADC02 (Thermistor) DigitalOut tr_sw(D4); // BMS status signal for flip-flop circuit  // LED settings DigitalOut LED_00(A0); DigitalOut LED_01(A1); DigitalOut LED_02(A2); DigitalOut LED_03(A3); DigitalOut LED_04(A4); // USB serial output Serial pc(USBTX, USBRX); // Recurring timer interrupt Ticker adc_sampling; // Temperature and Voltage flags int tmp_fg = 0; int vol_fg = 0; // ----------Various function---------- // Convert ADC values to temperature float Calc_temp(float adc_v) { float T = 0; // Temperature[K]  float T0 = 298.15; // [K]  float B = 3435; // B constant of NTC thermistor  float R0 = 10000; // 10*10^3 [Ohm]  float Rt = 0; // Thermistor [Ohm]  Rt = (5.0/adc_v - 1) * 10000; // Voltage divider  T = 1/(1/T0 + 1/B*log(Rt/R0)); // [K]  return(T-273.15); // [degree Celsius] } // Select MCP3008 and its channel // Receive ADC results float adc_spi(int ic_num, int ch_num) { // MCP3008 SPI communicationdatasheet: ????, p.19, 22  int TD0 = 0x01; // MCU Transmitted Data 0 (start bit)  int TD1 = 0x00; // MCU Transmitted Data 1 (initialization)  int TD2 = 0x00; // MCU Transmitted Data 2 (\"Don't Care\" Bits)  int highByte, lowByte = 0; TD1 = (ch_num + 8 )  4; switch(ic_num) { case 0: cs_thr00 = 0; spi.write(TD0); highByte = spi.write(TD1); lowByte = spi.write(TD2); cs_thr00 = 1; break; case 1: cs_thr01 = 0; spi.write(TD0); highByte = spi.write(TD1); lowByte = spi.write(TD2); cs_thr01 = 1; break; case 2: cs_thr02 = 0; spi.write(TD0); highByte = spi.write(TD1); lowByte = spi.write(TD2); cs_thr02 = 1; break; default: cs_thr00 = 1; cs_thr01 = 1; cs_thr02 = 1; break; } // Arrange the format of ADC results  return (((highByte \u0026 0x03)  8) + lowByte)*5.0/1024.0;\t// 10bit ADC -- 5[V] / 10[bits] = 0.00488[V/bits] } // Get cell voltage from 1894B board (LTC6804-1) // BMS max limit:????[V] // BMS minimum limit:????[V] // Datasheet: ???? int fg_ltc6804() { uint8_t wrcfg[6][6]; // Setting commands  uint16_t data[6][12]; // Cell volatage  float vol_data[6][12]; // Cell volatage  float v_total = 0; // Total voltage  uint8_t vf[6][8];\t// Not using  vol_fg = 0; // Voltage flag reset  // Refer to Table.36 on datasheet  // Board i (i:0~5)  for(int i = 0; i  6; i++) { wrcfg[i][0] = 0xF8; //CFGR0  wrcfg[i][1] = 0x4C; //CFGR1  wrcfg[i][2] = 0x38; //CFGR2  wrcfg[i][3] = 0xA0; //CFGR3  wrcfg[i][4] = 0x00; //CFGR4  wrcfg[i][5] = 0x00; //CFGR5  } // Execute LTC6804 function  LTC6804_initialize(); LTC6804_wrcfg(6, wrcfg); LTC6804_adcv(); // Measure each cell voltage  int rv_fg = LTC6804_rdcv(0, 6, data); // (All Register, Number of connection, Data storage)  // LSB of data is 100[uV]  LTC6804_rdst_reg(2, 6, *vf);\t// Not using（B固定，接続数，データ保存先）  // Calculate total voltage  for(int i = 0; i  6; i++){ pc.printf(\"UNIT%02d\\n\", i); // Display LTC6804 board number  for(int j = 0; j  12; j++){ vol_data[i][j] = data[i][j] * 0.0001; // Convert the range  if(!(((i == 2 || i == 5) \u0026\u0026 (3  j \u0026\u0026 j  6)) || ((i == 2 || i == 5) \u0026\u0026 (9  j)))){ // data[5][4]~data[5][11] are not using because there are only ???? cells.  if((vol_data[i][j]  ????) || (vol_data[i][j]  ????)){ // Check each cell voltage level (Max:????[V], Min:????[V])  vol_fg += 1; // Voltage flag  } v_total += vol_data[i][j]; // Total voltage  pc.printf(\"v%02d : %4.2f [V] \", j, vol_data[i][j]); // Display voltage status  } } pc.printf(\"\\n\\n\"); } pc.printf(\"TOTAL VOLTAGE : %5.2f [V]\\n\\n\", v_total);\t// Display Total voltage  return vol_fg; } // Get cell temperature from thermistor (103JT-050) // Datasheet: ???? int thermistor() { float bt_tmp[8][3] = {{0}}; // Battery temperature (1 module--3 thermistors, ???? has ???? modules.)  tmp_fg = 0; // Temperature flag reset  for(int i = 0; i  8; i++){ for(int j = 0; j  3; j++){ bt_tmp[i][j] = Calc_temp(adc_spi(j, i)); // Get temperature data  if(bt_tmp[i][j]  60.0){ // Check cell temperature (Max:60.0[deg])  tmp_fg += 1; } pc.printf(\"%4.1f [deg] \", bt_tmp[i][j]); // Display temperature status  } pc.printf(\"\\n\"); } pc.printf(\"\\n\\n\"); return tmp_fg; } // Interrupt function void interrupt() { pc.printf(\"************ CELL VOLTAGE ************\\n\"); vol_fg = fg_ltc6804(); // Voltage  pc.printf(\"************ CELL TEMPERATURE ************\\n\\n\"); tmp_fg = thermistor(); // Temperature  // Display flags  pc.printf(\"\\n****************************\\n\"); pc.printf(\"Voltage flag: %2d\\n\", vol_fg); pc.printf(\"Temperature flag: %2d\\n\", tmp_fg); pc.printf(\"****************************\\n\\n\\n\\n\"); } int main() { tr_sw = 1; // Normally HIGH (BMS status signal)  // SPI settings  spi.format(8,3); // 8bits, Mode 3  spi.frequency(500000); // 500[kHz]  // Wait 1[sec]  wait(1); // Timer interrupts by 1[sec]  adc_sampling.attach(\u0026interrupt, 1); // Checking flags  while(1){ if(tmp_fg  0 || vol_fg  0){ tr_sw = 1; // BMS shutdown signal  } else { tr_sw = 0; // No problem  } } } ","wordCount":"886","inLanguage":"en","datePublished":"2022-03-31T00:00:00Z","dateModified":"2022-03-31T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/"},"publisher":{"@type":"Organization","name":"BlankSpace","logo":{"@type":"ImageObject","url":"https://xxkizashi.github.io/blank-space/favicon.ico"}}}</script></head><body id=top><script>if(localStorage.getItem("pref-theme")==="dark"){document.body.classList.add('dark');}else if(localStorage.getItem("pref-theme")==="light"){document.body.classList.remove('dark')}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.body.classList.add('dark');}</script><header class=header><nav class=nav><div class=logo><a href=https://xxkizashi.github.io/blank-space/ accesskey=h title="BlankSpace (Alt + H)">BlankSpace</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://xxkizashi.github.io/blank-space/about/ title=About><span>About</span></a></li><li><a href=https://xxkizashi.github.io/blank-space/archives title=Archive><span>Archive</span></a></li><li><a href=https://xxkizashi.github.io/blank-space/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://xxkizashi.github.io/blank-space/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://xxkizashi.github.io/FSAE_TO_WIN/ title="FSAE Links"><span>FSAE Links</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://xxkizashi.github.io/blank-space/>Home</a>&nbsp;»&nbsp;<a href=https://xxkizashi.github.io/blank-space/posts/>Posts</a></div><h1 class=post-title>BMSについて</h1><div class=post-meta><span title="2022-03-31 00:00:00 +0000 UTC">March 31, 2022</span></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#bms%e3%81%ae%e6%a6%82%e8%a6%81 aria-label=BMSの概要>BMSの概要</a></li><li><a href=#%e3%83%8f%e3%83%bc%e3%83%89%e3%82%a6%e3%82%a7%e3%82%a2 aria-label=ハードウェア>ハードウェア</a></li><li><a href=#%e3%82%bd%e3%83%95%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a2 aria-label=ソフトウェア>ソフトウェア</a></li><li><a href=#tera-term%e3%81%a7%e3%81%ae%e8%a1%a8%e7%a4%ba aria-label="Tera Termでの表示">Tera Termでの表示</a></li><li><a href=#%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%ab%e3%81%ae%e9%83%a8%e5%88%86%e3%81%ae%e3%81%bf aria-label=ソースコード（オリジナルの部分のみ）>ソースコード（オリジナルの部分のみ）</a></li></ul></div></details></div><div class=post-content><h2 id=bmsの概要>BMSの概要<a hidden class=anchor aria-hidden=true href=#bmsの概要>#</a></h2><p>セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする．
+本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている．
+各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．</p><h2 id=ハードウェア>ハードウェア<a hidden class=anchor aria-hidden=true href=#ハードウェア>#</a></h2><ol><li>Microcontroller board<ul><li>Nucleo-F401RE<ul><li>これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．</li></ul></li><li>Pin assignment<ul><li>SPI<ul><li>MOSI : D11</li><li>MISO : D12</li><li>SCLK : D13</li><li>CS for LTC6804-1 : D10</li><li>CS for ADC00 (Thermistor) : D5</li><li>CS for ADC01 (Thermistor) : D6</li><li>CS for ADC02 (Thermistor) : D7</li></ul></li><li>BMS status signal (for Relay) : D4</li><li>LED : A0~A4</li></ul></li></ul></li><li>Voltage measurement<ul><li>BMS chip : <a href=https://www.analog.com/jp/products/ltc6804-1.html>LTC6804-1</a></li><li>BMS Demonstration circuit : <a href=https://www.analog.com/jp/design-center/evaluation-hardware-and-software/evaluation-boards-kits/dc1894b.html>1894B</a></li><li>isoSPI™ chip : <a href=https://www.analog.com/jp/products/ltc6820.html>LTC6820</a></li><li>isoSPI™ transceiver board : <a href=https://www.analog.com/jp/design-center/evaluation-hardware-and-software/evaluation-boards-kits/dc1941d.html>1941</a></li></ul></li><li>Temperature measurement<ul><li>Thermistor : <a href=http://www.semitec.co.jp/products/thermo/thermistor/jt/>103JT-050</a></li><li>A/D converter : <a href=http://akizukidenshi.com/catalog/g/gI-09485/>MCP3008</a></li></ul></li><li>PCB<ul><li>実機動作確認済<ul><li>Schematic: BMS_20200905.sch</li><li>Board: BMS_20200905.brd</li></ul></li><li>最新版（配置等の微修正，<strong>実機未検証</strong>）<ul><li>Schematic: BMS_20201230.sch</li><li>Board: BMS_20201230.brd</li></ul></li></ul></li></ol><h2 id=ソフトウェア>ソフトウェア<a hidden class=anchor aria-hidden=true href=#ソフトウェア>#</a></h2><ol><li><a href=https://os.mbed.com/>Mbed</a><ul><li>プログラムのコンパイルに使用した．</li><li>チュートリアル：<a href=https://os.mbed.com/users/nxpfan/notebook/lets_get_started_jp/>mbedを始めましょう！(&ldquo;Let&rsquo;s get started!&rdquo; in Japanese)</a></li></ul></li><li><a href=https://ttssh2.osdn.jp/index.html.ja>Tera Term</a><ul><li>NucleoとPCをUSBで繋ぎ，セル電圧およびセル温度を測定する際に使用した．</li></ul></li></ol><h2 id=tera-termでの表示>Tera Termでの表示<a hidden class=anchor aria-hidden=true href=#tera-termでの表示>#</a></h2><p>Newline code(改行コード) : LF<br><img loading=lazy src=BMS_TeraTerm.PNG alt=teraterm title=teraterm></p><h2 id=ソースコードオリジナルの部分のみ>ソースコード（オリジナルの部分のみ）<a hidden class=anchor aria-hidden=true href=#ソースコードオリジナルの部分のみ>#</a></h2><p>諸事情により"????&ldquo;としている部分がある．
+関数等は<a href=https://www.analog.com/jp/products/ltc6804-1.html#product-tools>LTC6804-1/ツール/Linduino</a>を参照．</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-main.cpp data-lang=main.cpp><span style=color:#75715e>// ----------Variable declaration----------
+</span><span style=color:#75715e>// I/O settings
+</span><span style=color:#75715e></span>SPI <span style=color:#a6e22e>spi</span>(D11, D12, D13);         <span style=color:#75715e>// MOSI, MISO, SCLK
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>cs_spi</span>(D10);         <span style=color:#75715e>// CS for LTC6804-1
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>cs_thr00</span>(D5);        <span style=color:#75715e>// CS for ADC00 (Thermistor)
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>cs_thr01</span>(D6);        <span style=color:#75715e>// CS for ADC01 (Thermistor)
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>cs_thr02</span>(D7);        <span style=color:#75715e>// CS for ADC02 (Thermistor)
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>tr_sw</span>(D4);           <span style=color:#75715e>// BMS status signal for flip-flop circuit
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>// LED settings
+</span><span style=color:#75715e></span>DigitalOut <span style=color:#a6e22e>LED_00</span>(A0);
+DigitalOut <span style=color:#a6e22e>LED_01</span>(A1);
+DigitalOut <span style=color:#a6e22e>LED_02</span>(A2);
+DigitalOut <span style=color:#a6e22e>LED_03</span>(A3);
+DigitalOut <span style=color:#a6e22e>LED_04</span>(A4);
+
+<span style=color:#75715e>// USB serial output
+</span><span style=color:#75715e></span>Serial <span style=color:#a6e22e>pc</span>(USBTX, USBRX);
+
+<span style=color:#75715e>// Recurring  timer interrupt
+</span><span style=color:#75715e></span>Ticker adc_sampling;
+
+<span style=color:#75715e>// Temperature and Voltage flags
+</span><span style=color:#75715e></span><span style=color:#66d9ef>int</span> tmp_fg <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>int</span> vol_fg <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+
+
+
+
+<span style=color:#75715e>// ----------Various function----------
+</span><span style=color:#75715e>// Convert ADC values to temperature
+</span><span style=color:#75715e></span><span style=color:#66d9ef>float</span> <span style=color:#a6e22e>Calc_temp</span>(<span style=color:#66d9ef>float</span> adc_v)
+{
+    <span style=color:#66d9ef>float</span> T <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;                <span style=color:#75715e>// Temperature[K]
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>float</span> T0 <span style=color:#f92672>=</span> <span style=color:#ae81ff>298.15</span>;          <span style=color:#75715e>// [K]
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>float</span> B <span style=color:#f92672>=</span> <span style=color:#ae81ff>3435</span>;             <span style=color:#75715e>// B constant of NTC thermistor
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>float</span> R0 <span style=color:#f92672>=</span> <span style=color:#ae81ff>10000</span>;           <span style=color:#75715e>// 10*10^3 [Ohm]
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>float</span> Rt <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;               <span style=color:#75715e>// Thermistor [Ohm]
+</span><span style=color:#75715e></span>
+    Rt <span style=color:#f92672>=</span> (<span style=color:#ae81ff>5.0</span><span style=color:#f92672>/</span>adc_v <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>) <span style=color:#f92672>*</span> <span style=color:#ae81ff>10000</span>;   <span style=color:#75715e>// Voltage divider
+</span><span style=color:#75715e></span>    T <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>/</span>(<span style=color:#ae81ff>1</span><span style=color:#f92672>/</span>T0 <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>/</span>B<span style=color:#f92672>*</span>log(Rt<span style=color:#f92672>/</span>R0));  <span style=color:#75715e>// [K]
+</span><span style=color:#75715e></span>    
+    <span style=color:#66d9ef>return</span>(T<span style=color:#f92672>-</span><span style=color:#ae81ff>273.15</span>);            <span style=color:#75715e>// [degree Celsius]
+</span><span style=color:#75715e></span>}
+
+<span style=color:#75715e>// Select MCP3008 and its channel
+</span><span style=color:#75715e>// Receive ADC results
+</span><span style=color:#75715e></span><span style=color:#66d9ef>float</span> <span style=color:#a6e22e>adc_spi</span>(<span style=color:#66d9ef>int</span> ic_num, <span style=color:#66d9ef>int</span> ch_num)
+{
+  <span style=color:#75715e>// MCP3008 SPI communicationdatasheet: ????, p.19, 22
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>int</span> TD0 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x01</span>;                  <span style=color:#75715e>// MCU Transmitted Data 0 (start bit)
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>int</span> TD1 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x00</span>;                  <span style=color:#75715e>// MCU Transmitted Data 1 (initialization)
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>int</span> TD2 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x00</span>;                  <span style=color:#75715e>// MCU Transmitted Data 2 (&#34;Don&#39;t Care&#34; Bits)
+</span><span style=color:#75715e></span>  
+  <span style=color:#66d9ef>int</span> highByte, lowByte <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+  TD1 <span style=color:#f92672>=</span> (ch_num <span style=color:#f92672>+</span> <span style=color:#ae81ff>8</span> ) <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>4</span>;
+  
+  <span style=color:#66d9ef>switch</span>(ic_num) {
+    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+        cs_thr00 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+        spi.write(TD0);
+        highByte <span style=color:#f92672>=</span> spi.write(TD1);
+        lowByte <span style=color:#f92672>=</span> spi.write(TD2);
+        cs_thr00 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        <span style=color:#66d9ef>break</span>;
+    
+    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+        cs_thr01 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+        spi.write(TD0);
+        highByte <span style=color:#f92672>=</span> spi.write(TD1);
+        lowByte <span style=color:#f92672>=</span> spi.write(TD2);
+        cs_thr01 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        <span style=color:#66d9ef>break</span>;
+
+    <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+        cs_thr02 <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+        spi.write(TD0);
+        highByte <span style=color:#f92672>=</span> spi.write(TD1);
+        lowByte <span style=color:#f92672>=</span> spi.write(TD2);
+        cs_thr02 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        <span style=color:#66d9ef>break</span>;
+
+    <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+        cs_thr00 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        cs_thr01 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        cs_thr02 <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+        <span style=color:#66d9ef>break</span>;
+  }
+
+  <span style=color:#75715e>// Arrange the format of ADC results
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> (((highByte <span style=color:#f92672>&amp;</span> <span style=color:#ae81ff>0x03</span>) <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>8</span>) <span style=color:#f92672>+</span> lowByte)<span style=color:#f92672>*</span><span style=color:#ae81ff>5.0</span><span style=color:#f92672>/</span><span style=color:#ae81ff>1024.0</span>;	<span style=color:#75715e>// 10bit ADC --&gt; 5[V] / 10[bits] = 0.00488[V/bits]
+</span><span style=color:#75715e></span>}
+
+<span style=color:#75715e>// Get cell voltage from 1894B board (LTC6804-1)
+</span><span style=color:#75715e>// BMS max limit:????[V]
+</span><span style=color:#75715e>// BMS minimum limit:????[V]
+</span><span style=color:#75715e>// Datasheet: ????
+</span><span style=color:#75715e></span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>fg_ltc6804</span>()
+{
+  <span style=color:#66d9ef>uint8_t</span> wrcfg[<span style=color:#ae81ff>6</span>][<span style=color:#ae81ff>6</span>];          <span style=color:#75715e>// Setting commands
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>uint16_t</span> data[<span style=color:#ae81ff>6</span>][<span style=color:#ae81ff>12</span>];         <span style=color:#75715e>// Cell volatage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>float</span> vol_data[<span style=color:#ae81ff>6</span>][<span style=color:#ae81ff>12</span>];        <span style=color:#75715e>// Cell volatage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>float</span> v_total <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;            <span style=color:#75715e>// Total voltage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>uint8_t</span> vf[<span style=color:#ae81ff>6</span>][<span style=color:#ae81ff>8</span>];				      <span style=color:#75715e>// Not using
+</span><span style=color:#75715e></span>
+  vol_fg <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;                   <span style=color:#75715e>// Voltage flag reset
+</span><span style=color:#75715e></span>
+  <span style=color:#75715e>// Refer to Table.36 on datasheet
+</span><span style=color:#75715e></span>  <span style=color:#75715e>// Board i (i:0~5)
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>6</span>; i<span style=color:#f92672>++</span>) {
+    wrcfg[i][<span style=color:#ae81ff>0</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0xF8</span>;           <span style=color:#75715e>//CFGR0
+</span><span style=color:#75715e></span>    wrcfg[i][<span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x4C</span>;           <span style=color:#75715e>//CFGR1
+</span><span style=color:#75715e></span>    wrcfg[i][<span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x38</span>;           <span style=color:#75715e>//CFGR2
+</span><span style=color:#75715e></span>    wrcfg[i][<span style=color:#ae81ff>3</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0xA0</span>;           <span style=color:#75715e>//CFGR3
+</span><span style=color:#75715e></span>    wrcfg[i][<span style=color:#ae81ff>4</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x00</span>;           <span style=color:#75715e>//CFGR4
+</span><span style=color:#75715e></span>    wrcfg[i][<span style=color:#ae81ff>5</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0x00</span>;           <span style=color:#75715e>//CFGR5
+</span><span style=color:#75715e></span>  }
+
+  <span style=color:#75715e>// Execute LTC6804 function 
+</span><span style=color:#75715e></span>  LTC6804_initialize();
+  LTC6804_wrcfg(<span style=color:#ae81ff>6</span>, wrcfg);
+  LTC6804_adcv();                                             <span style=color:#75715e>// Measure each cell voltage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>int</span> rv_fg <span style=color:#f92672>=</span> LTC6804_rdcv(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>6</span>, data);                       <span style=color:#75715e>// (All Register, Number of connection, Data storage)
+</span><span style=color:#75715e></span>                                                              <span style=color:#75715e>// LSB of data is 100[uV]
+</span><span style=color:#75715e></span>  LTC6804_rdst_reg(<span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>6</span>, <span style=color:#f92672>*</span>vf);								                <span style=color:#75715e>// Not using（B固定，接続数，データ保存先）
+</span><span style=color:#75715e></span>
+  <span style=color:#75715e>// Calculate total voltage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>6</span>; i<span style=color:#f92672>++</span>){
+    pc.printf(<span style=color:#e6db74>&#34;UNIT%02d</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, i);                               <span style=color:#75715e>// Display LTC6804 board number
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; j <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>12</span>; j<span style=color:#f92672>++</span>){
+      vol_data[i][j] <span style=color:#f92672>=</span> data[i][j] <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.0001</span>;                   <span style=color:#75715e>// Convert the range
+</span><span style=color:#75715e></span>      <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>(((i <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>||</span> i <span style=color:#f92672>==</span> <span style=color:#ae81ff>5</span>) <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#ae81ff>3</span> <span style=color:#f92672>&lt;</span> j <span style=color:#f92672>&amp;&amp;</span> j <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>6</span>)) <span style=color:#f92672>||</span> ((i <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>||</span> i <span style=color:#f92672>==</span> <span style=color:#ae81ff>5</span>) <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#ae81ff>9</span> <span style=color:#f92672>&lt;</span> j)))){                       <span style=color:#75715e>// data[5][4]~data[5][11] are not using because there are only ???? cells.
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span>((vol_data[i][j] <span style=color:#f92672>&gt;</span> <span style=color:#f92672>????</span>) <span style=color:#f92672>||</span> (vol_data[i][j] <span style=color:#f92672>&lt;</span> <span style=color:#f92672>????</span>)){ <span style=color:#75715e>// Check each cell voltage level (Max:????[V], Min:????[V])
+</span><span style=color:#75715e></span>          vol_fg <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>;                                        <span style=color:#75715e>// Voltage flag
+</span><span style=color:#75715e></span>        }
+        v_total <span style=color:#f92672>+=</span> vol_data[i][j];                            <span style=color:#75715e>// Total voltage
+</span><span style=color:#75715e></span>        pc.printf(<span style=color:#e6db74>&#34;v%02d : %4.2f [V]  &#34;</span>, j, vol_data[i][j]);  <span style=color:#75715e>// Display voltage status
+</span><span style=color:#75715e></span>      }
+    }
+    pc.printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>&#34;</span>);
+  }
+  pc.printf(<span style=color:#e6db74>&#34;TOTAL VOLTAGE : %5.2f [V]</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>&#34;</span>, v_total);				  <span style=color:#75715e>// Display Total voltage
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> vol_fg;
+}
+
+<span style=color:#75715e>// Get cell temperature from thermistor (103JT-050)
+</span><span style=color:#75715e>// Datasheet: ????
+</span><span style=color:#75715e></span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>thermistor</span>()
+{
+  <span style=color:#66d9ef>float</span> bt_tmp[<span style=color:#ae81ff>8</span>][<span style=color:#ae81ff>3</span>] <span style=color:#f92672>=</span> {{<span style=color:#ae81ff>0</span>}};                       <span style=color:#75715e>// Battery temperature (1 module--&gt;3 thermistors, ???? has ???? modules.)
+</span><span style=color:#75715e></span>  
+  tmp_fg <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;                                       <span style=color:#75715e>// Temperature flag reset
+</span><span style=color:#75715e></span>
+  <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>8</span>; i<span style=color:#f92672>++</span>){
+    <span style=color:#66d9ef>for</span>(<span style=color:#66d9ef>int</span> j <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; j <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>3</span>; j<span style=color:#f92672>++</span>){
+      bt_tmp[i][j] <span style=color:#f92672>=</span> Calc_temp(adc_spi(j, i));      <span style=color:#75715e>// Get temperature data
+</span><span style=color:#75715e></span>      <span style=color:#66d9ef>if</span>(bt_tmp[i][j] <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>60.0</span>){                      <span style=color:#75715e>// Check cell temperature (Max:60.0[deg])
+</span><span style=color:#75715e></span>        tmp_fg <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>;
+      }
+      pc.printf(<span style=color:#e6db74>&#34;%4.1f [deg]    &#34;</span>, bt_tmp[i][j]);    <span style=color:#75715e>// Display temperature status
+</span><span style=color:#75715e></span>    }
+    pc.printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+  }
+  pc.printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>&#34;</span>);
+  <span style=color:#66d9ef>return</span> tmp_fg;
+}
+
+<span style=color:#75715e>// Interrupt function
+</span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>interrupt</span>()
+{
+  pc.printf(<span style=color:#e6db74>&#34;************ CELL VOLTAGE ************</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+  vol_fg <span style=color:#f92672>=</span> fg_ltc6804();                            <span style=color:#75715e>// Voltage
+</span><span style=color:#75715e></span>  pc.printf(<span style=color:#e6db74>&#34;************ CELL TEMPERATURE ************</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>&#34;</span>);
+  tmp_fg <span style=color:#f92672>=</span> thermistor();                            <span style=color:#75715e>// Temperature
+</span><span style=color:#75715e></span>  
+  <span style=color:#75715e>// Display flags
+</span><span style=color:#75715e></span>  pc.printf(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>****************************</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>);
+  pc.printf(<span style=color:#e6db74>&#34;Voltage flag: %2d</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, vol_fg);
+  pc.printf(<span style=color:#e6db74>&#34;Temperature flag: %2d</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, tmp_fg);
+  pc.printf(<span style=color:#e6db74>&#34;****************************</span><span style=color:#ae81ff>\n\n\n\n</span><span style=color:#e6db74>&#34;</span>);
+}
+
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>()
+{
+  tr_sw <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;                    <span style=color:#75715e>// Normally HIGH (BMS status signal)
+</span><span style=color:#75715e></span>  
+  <span style=color:#75715e>// SPI settings
+</span><span style=color:#75715e></span>  spi.format(<span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>3</span>);              <span style=color:#75715e>// 8bits, Mode 3
+</span><span style=color:#75715e></span>  spi.frequency(<span style=color:#ae81ff>500000</span>);        <span style=color:#75715e>// 500[kHz]
+</span><span style=color:#75715e></span>
+  <span style=color:#75715e>// Wait 1[sec]
+</span><span style=color:#75715e></span>  wait(<span style=color:#ae81ff>1</span>);
+  
+  <span style=color:#75715e>// Timer interrupts by 1[sec]
+</span><span style=color:#75715e></span>  adc_sampling.attach(<span style=color:#f92672>&amp;</span>interrupt, <span style=color:#ae81ff>1</span>);
+
+  <span style=color:#75715e>// Checking flags
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>while</span>(<span style=color:#ae81ff>1</span>){
+    <span style=color:#66d9ef>if</span>(tmp_fg <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>||</span> vol_fg <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>){
+      tr_sw <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;                <span style=color:#75715e>// BMS shutdown signal
+</span><span style=color:#75715e></span>    } <span style=color:#66d9ef>else</span> {
+      tr_sw <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;                <span style=color:#75715e>// No problem
+</span><span style=color:#75715e></span>    }
+  }
+}
+
+</code></pre></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://xxkizashi.github.io/blank-space/tags/fsae/>FSAE</a></li><li><a href=https://xxkizashi.github.io/blank-space/tags/c++/>C++</a></li></ul><nav class=paginav><a class=prev href=https://xxkizashi.github.io/blank-space/posts/2022-07-11-ev-charger/><span class=title>« Prev Page</span><br><span>EVの充電器について</span></a>
+<a class=next href=https://xxkizashi.github.io/blank-space/posts/2022-03-30-research/><span class=title>Next Page »</span><br><span>研究活動において役立ったツール</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://xxkizashi.github.io/blank-space/>BlankSpace</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><script>let menu=document.getElementById('menu')
+if(menu){menu.scrollLeft=localStorage.getItem("menu-scroll-position");menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft);}}
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener("click",function(e){e.preventDefault();var id=this.getAttribute("href").substr(1);if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({behavior:"smooth"});}else{document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();}
+if(id==="top"){history.replaceState(null,null," ");}else{history.pushState(null,null,`#${id}`);}});});</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{if(document.body.className.includes("dark")){document.body.classList.remove('dark');localStorage.setItem("pref-theme",'light');}else{document.body.classList.add('dark');localStorage.setItem("pref-theme",'dark');}})</script></body></html>
