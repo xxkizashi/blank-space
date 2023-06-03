@@ -9,7 +9,16 @@
       <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>クルマ購入後メモ</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2023-06-03-car-accessory/</link>
+      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2023-06-03-car-accessory/</guid>
+      <description>買ったもの  三角表示板 ドラレコ ブースターケーブル ナビ用の液晶フィルム（100均）  コーティング  23/05/19 - クリスタルキーパー  メモ  Android Autoの無線化 フロントナンバーの取付が緩い問題→ライセンスフレームを付けないとこんなもん オートワイパーを普通の間欠に→OBD接続してもできない ナビの英語化→設定できない  </description>
+    </item>
+    
     <item>
       <title>速度とエンジン回転数の関係（クルマ）</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2023-05-15-car-velocity-revolution/</link>
