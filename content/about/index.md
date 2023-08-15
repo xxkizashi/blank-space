@@ -9,7 +9,7 @@ eyecatch: "/img/eyecatch.jpg"
 ![Mt. Adatara](me.jpg)
       
 ## My Interest in Engineering
+- Mechanical engineering
 - Materials
-- Manufacturing technology
-- Control engineering
 - Electronics
+- Control engineering

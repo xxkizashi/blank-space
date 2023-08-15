@@ -9,7 +9,25 @@
       <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 03 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/car/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/tags/car/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>エンジンオイル交換（クルマ）</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2023-08-07-car-oil/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2023-08-07-car-oil/</guid>
+      <description>エンジンオイル交換履歴  5804km（初回）：Castrol EDGE 5W-30（合成油）  参考  純正オイル：ULTRA LEO 0W-20 オイル量：3.2L（3.5L ※オイルフィルター交換時）  </description>
+    </item>
+    
+    <item>
+      <title>OBD2スキャンツールを接続してみた（クルマ）</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2023-07-01-car-obd-try/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2023-07-01-car-obd-try/</guid>
+      <description>使ったもの  スキャンツール：Vgate ELM327 OBD2スキャナー  アプリ：Car Scaner（無料）  Bluetooth接続時のペアリングPINは「1234」（だったはず）     クルマ側のOBD2コネクタ位置 運転席右下↓ 読み取れた情報（抜粋） 参考  Wikipedia - オン・ボード・ダイアグノーシス Wikipedia - OBD-II PIDs  </description>
+    </item>
+    
     <item>
       <title>クルマ購入後メモ</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2023-06-03-car-accessory/</link>
