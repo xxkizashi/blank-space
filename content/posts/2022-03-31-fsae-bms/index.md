@@ -37,12 +37,12 @@ tags:
     - Thermistor : [103JT-050](http://www.semitec.co.jp/products/thermo/thermistor/jt/)
     - A/D converter : [MCP3008](http://akizukidenshi.com/catalog/g/gI-09485/)
 1. PCB
-    - 実機動作確認済  
+    - ~~実機動作確認済~~ → シャットダウンシグナルを誤って5V出力としていた．正しくは3.3V→12Vで出力しなければならない．また，そもそも3.3V→5V出力の回路も間違っていた．再設計が必要．  
       - Schematic: BMS_20200905.sch
       - Board: BMS_20200905.brd
-    - 最新版（配置等の微修正，**実機未検証**）
-      - Schematic: BMS_20201230.sch
-      - Board: BMS_20201230.brd
+    - ~~最新版（配置等の微修正，実機未検証）~~
+      - ~~Schematic: BMS_20201230.sch~~
+      - ~~Board: BMS_20201230.brd~~
 
 ## ソフトウェア
 1. [Mbed](https://os.mbed.com/)
@@ -57,7 +57,11 @@ Newline code(改行コード) : LF
 
 ## ソースコード（オリジナルの部分のみ）
 諸事情により"????"としている部分がある．
-関数等は[LTC6804-1/ツール/Linduino](https://www.analog.com/jp/products/ltc6804-1.html#product-tools)を参照．
+関数等は[LTC6804-1/ツール/Linduino](https://www.analog.com/jp/products/ltc6804-1.html#product-tools)を参照．  
+更新：2023/08/18（main関数において，tmp_fgとvol_fgが割り込み後に未更新だったバグを修正した．S.S.に感謝！）
+
+
+
 ```main.cpp
 // ----------Variable declaration----------
 // I/O settings
@@ -85,7 +89,9 @@ Ticker adc_sampling;
 int tmp_fg = 0;
 int vol_fg = 0;
 
-
+// Temperature and Voltage flags (when you use timer interruption)
+// volatile int tmp_fg = 0;
+// volatile int vol_fg = 0;
 
 
 // ----------Various function----------
@@ -253,15 +259,20 @@ int main()
   wait(1);
   
   // Timer interrupts by 1[sec]
-  adc_sampling.attach(&interrupt, 1);
+  // adc_sampling.attach(&interrupt, 1);
 
   // Checking flags
   while(1){
+    interrupt();                // not timer interruption
+    pc.printf("vol_fg is %d\n",vol_fg);
+    pc.printf("tmp fg is %d\n",tmp_fg);
+
     if(tmp_fg > 0 || vol_fg > 0){
       tr_sw = 1;                // BMS shutdown signal
     } else {
       tr_sw = 0;                // No problem
     }
+    wait(1);
   }
 }
 

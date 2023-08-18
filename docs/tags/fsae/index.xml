@@ -17,7 +17,7 @@
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2022-03-31-fsae-bms/</guid>
       <description>BMSの概要 セル電圧が定格外，またはセル温度が60℃以上の場合に，シャットダウン回路上にあるリレーを開いて，AIRへの電源を断ち，高電圧システムをシャットダウンする． 本車両では，バッテリーセルを8セルごとにまとめて1つのモジュールとしている． 各セグメントごとに8セル（モジュール全体の100%）の電圧と，3セル（モジュール全体の37.5%）の温度を監視している．
-ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済  Schematic: BMS_20200905.</description>
+ハードウェア  Microcontroller board  Nucleo-F401RE  これがマスターである．セル電圧およびセル温度のデータ取得にはSPI通信を用いた．   Pin assignment  SPI  MOSI : D11 MISO : D12 SCLK : D13 CS for LTC6804-1 : D10 CS for ADC00 (Thermistor) : D5 CS for ADC01 (Thermistor) : D6 CS for ADC02 (Thermistor) : D7   BMS status signal (for Relay) : D4 LED : A0~A4     Voltage measurement  BMS chip : LTC6804-1 BMS Demonstration circuit : 1894B isoSPI™ chip : LTC6820 isoSPI™ transceiver board : 1941   Temperature measurement  Thermistor : 103JT-050 A/D converter : MCP3008   PCB  実機動作確認済 → シャットダウンシグナルを誤って5V出力としていた．正しくは3.</description>
     </item>
     
     <item>
