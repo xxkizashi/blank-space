@@ -5,6 +5,7 @@ categories:
   - "Tech"
 tags:
   - "Motorcycle"
+  - "Maintenance"
 eyecatch: "/img/eyecatch.jpg"
 ---
 ## スロットルワイヤ調整履歴
