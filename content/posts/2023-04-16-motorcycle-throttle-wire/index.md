@@ -18,6 +18,9 @@ eyecatch: "/img/eyecatch.jpg"
       <img src="throttle_wire.jpg" width="50%">
 <br>
 <br>
+1. 14076km
+    <img src="throttle_wire-14000.jpg" width="50%">
+<br>
 
 
 ## クラッチワイヤ調整履歴

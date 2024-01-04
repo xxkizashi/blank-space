@@ -9,7 +9,16 @@
       <link>https://xxkizashi.github.io/blank-space/eyecatch.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xxkizashi.github.io/blank-space/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>プラグ交換（バイク）</title>
+      <link>https://xxkizashi.github.io/blank-space/posts/2023-11-05-motorcycle-plug/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxkizashi.github.io/blank-space/posts/2023-11-05-motorcycle-plug/</guid>
+      <description>プラグ交換履歴  14076km，純正→MotoDX   型番  NGK MotoDXプラグ CPR7EDX-9S デイトナ プラグソケット 16mm 差込3/8インチ 97752  </description>
+    </item>
+    
     <item>
       <title>マフラー交換（クルマ）</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2023-10-01-car-muffler/</link>
@@ -43,7 +52,7 @@
       <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2023-06-03-car-accessory/</guid>
-      <description>買ったもの  三角表示板 ドラレコ ブースターケーブル ナビ用の液晶フィルム（100均）  コーティング  23/05/19 - クリスタルキーパー  メモ  Android Autoの無線化 フロントナンバーの取付が緩い問題→ライセンスフレームを付けないとこんなもん オートワイパーを普通の間欠に→OBD接続してもできない ナビの英語化→設定できない  </description>
+      <description>買ったもの  必ず必要なもの  三角表示板 ドラレコ：Yupiteru ADR-300S ブースターケーブル 緊急脱出用シートベルトカッター/ウィンドウハンマー   あると便利なもの  ナビ用の液晶フィルム（100均） フロントガラス凍結防止シート   タイヤ交換系  トルクレンチ：大橋産業 2060 5pc 油圧ジャッキ：エマーソン EM-511（2t，最低位：80mm，最高位：380mm） サイド掛けジャッキアダプター：エマーソン EM-226N    コーティング  23/05/19 - クリスタルキーパー  スタッドレスタイヤ  23/11/25（約11100km）  ロクサーニスポーツ RS-10（17inch，7.0J，+55.0） IG60（215/50R17 91Q）    メモ  Android Autoの無線化 フロントナンバーの取付が緩い問題→ライセンスフレームを付けないとこんなもん オートワイパーを普通の間欠に→OBD接続してもできない ナビの英語化→設定できない  </description>
     </item>
     
     <item>
@@ -61,7 +70,7 @@
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2023-04-16-motorcycle-throttle-wire/</guid>
-      <description>スロットルワイヤ調整履歴  約10400km  右側のカウルを外す     クラッチワイヤ調整履歴  ?km 約10400km  </description>
+      <description>スロットルワイヤ調整履歴  約10400km  右側のカウルを外す    14076km   クラッチワイヤ調整履歴  ?km 約10400km  </description>
     </item>
     
     <item>
@@ -79,16 +88,16 @@
       <pubDate>Sat, 19 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2022-11-19-motorcycle-oil/</guid>
-      <description>エンジンオイル交換履歴  約1000km（初回），オイルフィルター交換 約4000km  7558km  約10500km   型番  エンジンオイル：Honda ウルトラ G1 SL 5W-30 1L ドレンワッシャー：デイトナ ドレンワッシャー M12 厚さ1.7mm 10枚入り 75420 オイルフィルター：KITACO オイルエレメント H-06（KITACO K-PIT オイル交換フルセットを購入）  参考  Honda - 定期交換部品について  </description>
+      <description>エンジンオイル交換履歴  約1000km（初回），オイルフィルター交換 約4000km  7558km  約10500km  14076km   型番  エンジンオイル：Honda ウルトラ G1 SL 5W-30 1L ドレンワッシャー：デイトナ ドレンワッシャー M12 厚さ1.7mm 10枚入り 75420 オイルフィルター：KITACO オイルエレメント H-06（KITACO K-PIT オイル交換フルセットを購入）  参考  Honda - 定期交換部品について  </description>
     </item>
     
     <item>
-      <title>シールチェーン化</title>
+      <title>チェーン交換</title>
       <link>https://xxkizashi.github.io/blank-space/posts/2022-11-06-motorcycle-chain/</link>
       <pubDate>Sun, 06 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://xxkizashi.github.io/blank-space/posts/2022-11-06-motorcycle-chain/</guid>
-      <description>メモ  型番：RK JAPAN GV420MRU（リンク数：108）  取り外し後の純正チェーン（走行距離：約7000km）   参考  D.I.D - MAINTENANCE  </description>
+      <description>チェーン交換履歴  約7000km（初回），純正チェーン→シールチェーン  取り外し後    約14000km，シールチェーン→シールチェーン  取り外し前  取り外し後     型番  RK JAPAN GV420MRU（リンク数：108）   参考  D.I.D - MAINTENANCE  </description>
     </item>
     
     <item>
