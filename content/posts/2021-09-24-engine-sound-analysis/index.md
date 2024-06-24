@@ -62,6 +62,9 @@ eyecatch: "/img/eyecatch.jpg"
 ![F1](F1.png)
 <br>
 <br>
+<audio src="F1.mp3" controls></audio>
+<br>
+<br>
 
 ## ブルーインパルス
 ![BlueImpulse](BlueImpulse.png)
