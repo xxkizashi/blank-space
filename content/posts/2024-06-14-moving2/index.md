@@ -29,3 +29,5 @@ tags:
 - 参考
   - [デジタル庁 - 引越し手続オンラインサービス](https://www.digital.go.jp/policies/moving_onestop_service/)
   - [引越れんらく帳](https://www.hikkoshi-line.com/)
+  - [自動車保有関係手続のワンストップサービス](https://www.oss.mlit.go.jp/portal/index.html)
+    - 車庫証明，車検証の住所変更等
