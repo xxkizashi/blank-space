@@ -16,6 +16,7 @@ eyecatch: "/img/eyecatch.jpg"
     - Castrol MAGNATEC 5W-30
     - 日東工業 FIRSTGRID オイルフィルター H-21
 1. 26385km：Castrol MAGNATEC 5W-30
+1. 33065km：Castrol MAGNATEC 5W-30
 
 ## 参考
 - 純正オイル：ULTRA LEO 0W-20
